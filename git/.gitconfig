@@ -1,0 +1,5 @@
+[credential]
+	helper = wincred
+[user]
+	name = JeremyChuaWX
+	email = chua.jeremy.wx@gmail.com
