@@ -1,23 +1,34 @@
 # Shell
 - zsh
 
-# Installed Apps
-## Languages
-- javascript
-- python
-- java
-
-## GNU
+# Package managers
 - homebrew
-- stow
-- fzf
-- zoxide
-- git
-- tree
+- npm
+- pip
 - yarn
 
-## TUI
-- neovim
-
-## GUI
+# Homebrew
+- node
+- python
+- adoptopenjdk11
 - alacritty
+- macdown
+- fzf
+- zoxide
+- ripgrep
+- yarn
+- tree
+- git
+- neovim
+- stow
+- tmux
+- ffmpeg
+- mysql
+
+# npm
+- neovim
+- create-react-app
+- typescript
+
+# pip
+- pynvim
