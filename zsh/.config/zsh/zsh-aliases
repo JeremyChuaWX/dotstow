@@ -1,0 +1,15 @@
+# brew
+alias brewu="brew update && brew upgrade"
+alias brewc="brew cleanup && brew autoremove"
+
+# directory viewing
+alias cdls="cd && ls"
+alias atree="tree -a"
+
+# colourise grep output (good for log files)
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
+# shortcuts
+alias dstow="cd $HOME/.dotstow"
