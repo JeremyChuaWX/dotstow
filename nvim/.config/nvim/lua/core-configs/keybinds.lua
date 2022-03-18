@@ -29,6 +29,3 @@ set("n", "<C-y>", "3<C-y>", opts)
 
 -- copy to end
 set("n", "Y", "y$", opts)
-
--- neogit
-set("n", "<leader>gg", ":Neogit<CR>", opts)
