@@ -12,9 +12,6 @@ zsh_add_file "zsh-prompt"
 #---------#
 
 # history
-export HISTSIZE=10000
-export SAVEHIST=10000
-export HISTFILE=$ZDOTDIR/.zsh_history
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
