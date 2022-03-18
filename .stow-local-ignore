@@ -1,1 +1,2 @@
 # files to be ignored by gnu stow
+\.DS_Store
