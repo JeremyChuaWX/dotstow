@@ -42,3 +42,6 @@
 
 # pip
 - pynvim
+
+# Fonts
+- FuraCode
