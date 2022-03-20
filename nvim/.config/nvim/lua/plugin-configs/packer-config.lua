@@ -95,6 +95,7 @@ return packer.startup(function(use)
         as = "catppuccin"
     }
     use "folke/tokyonight.nvim"
+    use "rebelot/kanagawa.nvim"
 
     if packer_bootstrap then
         packer.sync()

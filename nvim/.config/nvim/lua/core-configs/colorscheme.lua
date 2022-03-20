@@ -7,7 +7,7 @@ let g:everforest_better_performance = 1
 let g:tokyonight_style = "night"
 
 try
-    colorscheme tokyonight
+    colorscheme kanagawa
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
 endtry
