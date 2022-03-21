@@ -22,6 +22,7 @@ _darcs
 ^/COPYING
 
 # Custom
-.DS_Store
-.stow-local-ignore
+\.DS_Store
+\.stow-local-ignore
 TODO.*
+.*\.BACKUP
