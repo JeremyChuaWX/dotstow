@@ -34,6 +34,7 @@
 - tmux
 - ffmpeg
 - mysql
+- mycli
 
 # npm
 - neovim
