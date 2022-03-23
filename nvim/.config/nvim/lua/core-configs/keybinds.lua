@@ -29,3 +29,6 @@ set("n", "<C-y>", "3<C-y>", opts)
 
 -- copy to end
 set("n", "Y", "y$", opts)
+
+-- easy toggle fold
+set("n", "Z", "za", opts)
