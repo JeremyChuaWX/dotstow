@@ -72,8 +72,12 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig"
     use "williamboman/nvim-lsp-installer"
 
+    -- java
+    use "mfussenegger/nvim-jdtls"
+
     -- snippets
     use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
 
     -- cmp
     use "hrsh7th/nvim-cmp"
