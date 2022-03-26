@@ -59,11 +59,11 @@ cmp.setup({
         { "i", "s" }),
     },
     sources = {
-        { name = 'buffer' },
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
-        { name = 'path' },
         { name = 'nvim_lua' },
+        { name = 'path' },
+        { name = 'buffer' },
     },
 })
 
