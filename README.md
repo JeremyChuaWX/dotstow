@@ -46,3 +46,6 @@
 
 # Fonts
 - FuraCode
+
+# TODO
+- create an `install.sh`
