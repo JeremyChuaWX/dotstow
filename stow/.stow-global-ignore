@@ -26,3 +26,4 @@ _darcs
 \.stow-local-ignore
 TODO.*
 .*\.BACKUP
+.*\.otf
