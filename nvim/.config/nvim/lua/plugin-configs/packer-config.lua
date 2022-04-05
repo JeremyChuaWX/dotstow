@@ -37,7 +37,7 @@ return packer.startup(function(use)
     -- editor
     use "lukas-reineke/indent-blankline.nvim"
     use "windwp/nvim-autopairs"
-    use "blackCauldron7/surround.nvim"
+    use "JeremyChuaWX/surround.nvim"
 
     -- interface
     use "akinsho/bufferline.nvim"
