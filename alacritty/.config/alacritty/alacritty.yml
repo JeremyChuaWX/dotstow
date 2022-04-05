@@ -18,6 +18,9 @@ scrolling:
   # Scrolling distance multiplier.
   multiplier: 3
 
+mouse:
+  hide_when_typing: true
+
 # Font configuration
 font:
   normal:

@@ -1,5 +1,7 @@
 local options = {
-    -- general
+    -------------
+    -- general --
+    -------------
     compatible = false,
     syntax = "on",
     clipboard = "unnamed,unnamedplus",
@@ -13,22 +15,30 @@ local options = {
     mouse = "a",
     autochdir = true,
 
-    -- backup, swap, viminfo
+    ---------------------------
+    -- backup, swap, viminfo --
+    ---------------------------
     backup = false,
     swapfile = false,
 
-    -- file type detection
+    -------------------------
+    -- file type detection --
+    -------------------------
     filetype = "on",
     -- filetype plugin
     -- filetype indent
 
-    -- tab completion
+    --------------------
+    -- tab completion --
+    --------------------
     wildmenu = true,
     wildignore = vim.opt.wildignore + {".git", ".DS_Store"},
     wildignorecase = true,
     wildmode = {"list", "longest"},
 
-    -- interface
+    ---------------
+    -- interface --
+    ---------------
     ruler = true,
     relativenumber = true,
     number = true,
@@ -41,8 +51,11 @@ local options = {
     splitright = true,
     signcolumn = "yes",
     completeopt = {"menuone", "noselect", "menu"},
+    colorcolumn = "100",
 
-    -- editor
+    ------------
+    -- editor --
+    ------------
     encoding = "utf-8",
     wrap = true,
     linebreak = true,
@@ -52,11 +65,15 @@ local options = {
     backspace = {"indent", "eol", "start"},
     foldlevelstart = 99,
 
-    -- buffer and tabs
+    ---------------------
+    -- buffer and tabs --
+    ---------------------
     hidden = true,
     autoread = true,
 
-    -- indentation
+    -----------------
+    -- indentation --
+    -----------------
     expandtab = true,
     smarttab = true,
     tabstop = 4,
@@ -65,12 +82,16 @@ local options = {
     autoindent = true,
     smartindent = true,
 
-    -- appearance
+    ----------------
+    -- appearance --
+    ----------------
     background = "dark",
     cursorline = true,
     termguicolors = true,
 
-    -- search
+    ------------
+    -- search --
+    ------------
     ignorecase = true,
     smartcase = true,
     hlsearch = true,
