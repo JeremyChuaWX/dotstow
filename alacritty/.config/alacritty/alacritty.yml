@@ -7,6 +7,9 @@ env:
   # available, otherwise `xterm-256color` is used.
   TERM: alacritty
 
+window:
+  startup_mode: Maximized
+
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
