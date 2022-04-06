@@ -24,3 +24,5 @@ _darcs
 
 # Custom
 \.DS_Store
+.*\.log
+.*\.BACKUP
