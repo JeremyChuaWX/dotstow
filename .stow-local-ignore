@@ -21,10 +21,3 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
-
-# Custom
-\.DS_Store
-TODO.*
-.*\.BACKUP
-fonts
-docs
