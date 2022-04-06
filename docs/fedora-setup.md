@@ -18,3 +18,6 @@
 # Nvidia drivers
 - sudo dnf install akmod-nvidia
 - sudo dnf install xorg-x11-drv-nvidia-cuda
+
+# Swap caps with escape
+- `dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"`
