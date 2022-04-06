@@ -9,6 +9,7 @@ env:
 
 window:
   startup_mode: Maximized
+  dynamic_title: true
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -40,6 +41,7 @@ font:
     style: Bold Italic
 
   size: 16.0
+  ligatures: true
 
 schemes:
   kanagawa: &kanagawa
@@ -221,4 +223,4 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
+  save_to_clipboard: true
