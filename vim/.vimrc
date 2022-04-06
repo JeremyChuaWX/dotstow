@@ -102,10 +102,9 @@ set smartindent
 set background=dark
 colorscheme gruvbox 
 set cursorline
-" set t_Co=256
 set termguicolors
-" let &t_AB="\e[48;5;%dm"
-" let &t_AF="\e[38;5;%dm" 
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Change cursor on insert
 let &t_SI.="\e[6 q"
