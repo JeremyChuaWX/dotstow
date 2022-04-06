@@ -12,6 +12,7 @@ _darcs
 \.hg
 
 \.git
+\.gitmodules
 \.gitignore
 
 .+~          # emacs backup files
@@ -23,7 +24,7 @@ _darcs
 
 # Custom
 \.DS_Store
-\.stow-local-ignore
 TODO.*
 .*\.BACKUP
-.*\.otf
+fonts
+docs
