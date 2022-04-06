@@ -1,12 +1,16 @@
 # How to use GNU Stow
 - install stow on the machine
-- clone this repo into ~
+- clone this repo into ~/.dotstow
 - cd to ~/.dotstow
-- run `path/to/stow -v -R -t ~ .`
+- run `path/to/stow -v -R .`
     - `-v`: verbose; list out what stow is doing
     - `-R`: remove old links, and then add new links
     - `-t ~`: set the target directory to stow packages to
-    - `*/`: the package to be installed, or wildcard to install all packages
+    - `.`: the package to be installed, or wildcard to install all packages
+
+# How to setup git submodules
+- run `git submodule init`
+- run `git submodule update ...` (where ... is the respective submodules)
 
 # Shell
 - zsh
@@ -42,10 +46,10 @@
 - typescript
 
 # pip
-- pynvim
+- neovim
 
 # Fonts
-- FuraCode
+- [FuraCode](fonts/)
 
 # Other setups
 - [Fedora](docs/fedora-setup.md)
