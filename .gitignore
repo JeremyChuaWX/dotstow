@@ -4,3 +4,4 @@
 **.DS_Store
 **.BACKUP
 **.log
+**/plugin/packer_compiled.lua
