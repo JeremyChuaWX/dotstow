@@ -1,3 +1,6 @@
 **.zcompdump
 **.zsh_history
 **/zsh/plugins
+**.DS_Store
+**.BACKUP
+**.log
