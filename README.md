@@ -2,7 +2,7 @@
 - install stow on the machine
 - clone this repo into ~
 - cd to ~/.dotstow
-- run `path/to/stow -v -R -t ~ */`
+- run `path/to/stow -v -R -t ~ .`
     - `-v`: verbose; list out what stow is doing
     - `-R`: remove old links, and then add new links
     - `-t ~`: set the target directory to stow packages to
@@ -46,6 +46,9 @@
 
 # Fonts
 - FuraCode
+
+# Other setups
+- [Fedora](docs/fedora-setup.md)
 
 # TODO
 - create an `install.sh`
