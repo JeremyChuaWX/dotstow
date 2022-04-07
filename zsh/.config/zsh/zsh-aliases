@@ -3,7 +3,7 @@ alias brewu="brew update && brew upgrade"
 alias brewc="brew cleanup && brew autoremove"
 
 # directory viewing
-alias ll="ls -A -l"
+alias ll="ls -A -l --color"
 alias cdls="cd && ls"
 alias atree="tree -a"
 
