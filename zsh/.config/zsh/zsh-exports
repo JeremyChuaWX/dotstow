@@ -2,8 +2,11 @@
 #-paths-#
 #-------#
 
-eval "$(/opt/homebrew/bin/brew shellenv)" # homebrew
-export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH" # python
+if [[ "$OSTYPE" == "darwin" ]] then
+    eval "$(/opt/homebrew/bin/brew shellenv)" # homebrew
+    export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH" # python
+fi
+
 export PATH="$HOME/.cargo/bin:$PATH" # rust
 export PATH="$HOME/.local/bin:$PATH" # local/bin
 
