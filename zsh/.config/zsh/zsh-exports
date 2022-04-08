@@ -10,6 +10,16 @@ fi
 export PATH="$HOME/.cargo/bin:$PATH" # rust
 export PATH="$HOME/.local/bin:$PATH" # local/bin
 
+#-------------#
+#-zsh history-#
+#-------------#
+
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 export HISTFILE=$ZDOTDIR/.zsh_history
+
+#--------------#
+#-default apps-#
+#--------------#
+
+export EDITOR=/usr/bin/vim
