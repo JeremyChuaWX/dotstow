@@ -99,12 +99,19 @@ set autoindent
 set smartindent
 
 " Aesthetics
-set background=dark
-colorscheme gruvbox 
 set cursorline
-set termguicolors
+
+" True colours
+if has('termguicolors')
+  set termguicolors
+endif
+
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" Colourscheme
+set background=dark
+colorscheme gruvbox
 
 " Change cursor on insert
 let &t_SI.="\e[6 q"

@@ -7,6 +7,3 @@
 [submodule "vim/.vim/pack/default/start/vim-surround"]
 	path = vim/.vim/pack/default/start/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule "vim/.vim/pack/default/start/everforest"]
-	path = vim/.vim/pack/default/start/everforest
-	url = https://github.com/sainnhe/everforest
