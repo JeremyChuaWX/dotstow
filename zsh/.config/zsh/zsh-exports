@@ -22,4 +22,4 @@ export HISTFILE=$ZDOTDIR/.zsh_history
 #-default apps-#
 #--------------#
 
-export EDITOR=/usr/bin/vim
+export EDITOR=vim

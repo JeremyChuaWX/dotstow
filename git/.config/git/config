@@ -1,7 +1,5 @@
 [core]
     editor = vim
-[credential]
-	helper = wincred
 [user]
 	name = Jeremy Chua
 	email = chua.jeremy.wx@gmail.com
