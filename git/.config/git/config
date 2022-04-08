@@ -5,3 +5,8 @@
 	email = chua.jeremy.wx@gmail.com
 [init]
     defaultBranch = main
+[credential]
+	helper = 
+	helper = /usr/local/bin/git-credential-manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true

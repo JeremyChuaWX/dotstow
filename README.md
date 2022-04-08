@@ -23,7 +23,7 @@
 
 # Fonts
 - [FuraCode](fonts/FuraCode)
-- [JetBrains](fonts/JetBrains)
+- [JetBrains](fonts/JetBrainsMono)
 
 # Other setups
 - [Fedora](docs/fedora-setup.md)

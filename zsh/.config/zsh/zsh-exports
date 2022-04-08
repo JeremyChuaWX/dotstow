@@ -23,3 +23,13 @@ export HISTFILE=$ZDOTDIR/.zsh_history
 #--------------#
 
 export EDITOR=vim
+
+#----------------------#
+#-GCM credential store-#
+#----------------------#
+
+if [[ "$OSTYPE" == "darwin"* ]] then
+    export GCM_CREDENTIAL_STORE=keychain
+elif [[ "$OSTYPE" == "linux-gnu" ]] then
+    export GCM_CREDENTIAL_STORE=gpg
+fi

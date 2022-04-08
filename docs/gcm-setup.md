@@ -14,6 +14,6 @@
     - `git-credential-manager-core unconfigure`
     - `rm $(command -v git-credential-manager-core)`
 ## Setup credential store for Linux (gpg/pass)
-    - create a new gpg key pair: `gpg --gen-key` (follow the prompts)
-    - initialise the pass utility: `pass init <gpg-id>`
-        - `<gpg-id>` is user id of the gpg key pair
+- create a new gpg key pair: `gpg --gen-key` (follow the prompts)
+- initialise the pass utility: `pass init <gpg-id>`
+    - `<gpg-id>` is user id of the gpg key pair
