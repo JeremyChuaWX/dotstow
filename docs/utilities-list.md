@@ -7,6 +7,7 @@
 - ffmpeg
 - tree
 - ripgrep
+- ranger
 
 ## Package manager specific
 ### pip
