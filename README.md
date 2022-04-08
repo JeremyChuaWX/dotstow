@@ -16,43 +16,18 @@
 - zsh
 
 # Package managers
-- homebrew
-- npm
-- pip
+- [homebrew](docs/homebrew-packages.md)
+- [npm](docs/npm-packages.md)
+- [pip](docs/pip-packages.md)
 - yarn
-
-# Homebrew
-- node
-- python
-- adoptopenjdk11
-- alacritty
-- macdown
-- fzf
-- zoxide
-- ripgrep
-- yarn
-- tree
-- git
-- neovim
-- stow
-- tmux
-- ffmpeg
-- mysql
-- mycli
-
-# npm
-- neovim
-- create-react-app
-- typescript
-
-# pip
-- neovim
 
 # Fonts
-- [FuraCode](fonts/)
+- [FuraCode](fonts/FuraCode)
+- [JetBrains](fonts/JetBrains)
 
 # Other setups
 - [Fedora](docs/fedora-setup.md)
+- [GCM](docs/gcm-setup.md)
 
 # TODO
 - create an `install.sh`
