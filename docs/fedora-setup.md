@@ -7,7 +7,9 @@ max_parallel_downloads=10
 ```
 
 # Update system
-- sudo dnf update
+```
+sudo dnf update
+```
 
 # Enable rpm fusion
 ```
