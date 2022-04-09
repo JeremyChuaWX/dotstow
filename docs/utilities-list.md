@@ -14,5 +14,6 @@
 - neovim
 ### node
 - neovim
-## dnf
+### dnf
 - pass
+- gcc-c++
