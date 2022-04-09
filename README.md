@@ -18,7 +18,7 @@
 
 # Other setups
 - [Fedora](docs/fedora-setup.md)
-- [git submodules](docs/gitsubmodules.md)
+- [git submodules](docs/gitsubmodules-setup.md)
 
 # TODO
 - create an `install.sh`
