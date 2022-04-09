@@ -46,12 +46,6 @@ return packer.startup(function(use)
 
     -- git
     use "lewis6991/gitsigns.nvim"
-    use {
-        "TimUntersberger/neogit",
-        requires = {
-            "sindrets/diffview.nvim",
-        }
-    }
 
     -- telescope
     use "nvim-telescope/telescope.nvim"
@@ -91,14 +85,6 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-nvim-lua"
 
     -- colorschemes
-    use "lunarvim/darkplus.nvim"
-    use "gruvbox-community/gruvbox"
-    use "sainnhe/everforest"
-    use {
-        "catppuccin/nvim",
-        as = "catppuccin"
-    }
-    use "folke/tokyonight.nvim"
     use "rebelot/kanagawa.nvim"
 
     if packer_bootstrap then

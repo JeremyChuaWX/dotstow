@@ -20,5 +20,3 @@ require "plugin-configs.nvimcmp"
 
 -- git
 require "plugin-configs.gitsigns"
-require "plugin-configs.neogit"
-require "plugin-configs.diffview"
