@@ -1,6 +1,11 @@
 #!/bin/zsh
 
-HOMEBREW_LIST=$(brew list)
-NODE_VER=$(node --version)
-if [[ $NODE_VER = "v"* ]]; then
-fi
+# setup git submodules
+git submodules init
+git submodules update
+
+# setup gcm
+
+# stow
+cd $HOME/.dotstow
+stow -v -R */
