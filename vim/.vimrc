@@ -31,7 +31,7 @@ set wildmode=list,longest
 
 " Interface
 set ruler
-set relativenumber
+" set relativenumber
 set number
 set showcmd
 set cmdheight=2

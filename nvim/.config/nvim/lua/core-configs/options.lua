@@ -40,7 +40,7 @@ local options = {
     -- interface --
     ---------------
     ruler = true,
-    relativenumber = true,
+    -- relativenumber = true,
     number = true,
     showcmd = true,
     cmdheight = 2,
