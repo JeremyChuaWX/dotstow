@@ -26,6 +26,14 @@ packer.init {
   },
 }
 
+-- automatically run :PackerCompile when saving this file
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost packer-config.lua source <afile> | PackerCompile
+  augroup end
+]])
+
 return packer.startup(function(use)
 
     -- general
@@ -76,13 +84,14 @@ return packer.startup(function(use)
     -- cmp
     use "hrsh7th/nvim-cmp"
 
-    -- cmp plugins
+    -- cmp sources
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-path"
     use "hrsh7th/cmp-cmdline"
     use "saadparwaiz1/cmp_luasnip"
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
+    use " hrsh7th/cmp-nvim-lsp-signature-help"
 
     -- colorschemes
     use "rebelot/kanagawa.nvim"
