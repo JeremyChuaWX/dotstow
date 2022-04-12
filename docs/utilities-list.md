@@ -7,13 +7,14 @@
 - ffmpeg
 - tree
 - ripgrep
-- ranger
 
 ## Package manager specific
 ### pip
 - neovim
+
 ### node
 - neovim
+
 ### dnf
 - pass
 - gcc-c++
