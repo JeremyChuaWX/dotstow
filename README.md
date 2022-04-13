@@ -21,4 +21,5 @@
 - [git submodules](docs/gitsubmodules-setup.md)
 
 # TODO
-- create an `install.sh`
+- [ ] create an `install.sh`
+- [ ] restructure docs into individual READMEs in each folder
