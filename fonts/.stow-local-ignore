@@ -25,3 +25,4 @@ _darcs
 # Custom
 ^/Fura.*
 ^/Jet.*
+\.DS_Store
