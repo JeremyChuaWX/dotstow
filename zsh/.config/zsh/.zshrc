@@ -41,9 +41,7 @@ bindkey "^?" backward-delete-char
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}"
-# zstyle ':completion::complete:lsof:*' menu yes select
 zmodload zsh/complist
-# compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 autoload -U up-line-or-beginning-search
@@ -74,3 +72,4 @@ zsh_add_plugin "hlissner/zsh-autopair"
 bindkey -s '^T' 'tmux attach -t $(tmux list-sessions -F \\#S | fzf)\n'
 bindkey -s '^D' 'tmux kill-session -t $(tmux list-sessions -F \\#S | fzf)\n'
 bindkey -s '^G' 'git status\n'
+bindkey -M menuselect "${terminfo[kcbt]}" reverse-menu-complete # s-tab to go backwards in compselect
