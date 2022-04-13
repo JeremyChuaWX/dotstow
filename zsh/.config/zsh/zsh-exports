@@ -8,7 +8,7 @@ if [[ "$OSTYPE" == "darwin"* ]] then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH" # rust
-export PATH="$HOME/.local:$PATH" # local/bin
+export PATH="$HOME/.local/bin:$PATH" # local/bin
 
 # if [[ -d "$HOME/.local/share/nvim/lsp_servers" ]] then
 #     export PATH="$HOME/.local/share/nvim/lsp_servers:$PATH"

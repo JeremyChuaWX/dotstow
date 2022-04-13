@@ -1,12 +1,12 @@
 #!/bin/zsh
 
 # clone dotfile structure into home
-# if [[ ! -d "$HOME/.dotstow"]] then
-#     echo ".dotstow exists, continue install progress..."
-# else
-#     git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
-# fi
-# echo "===== Done =====\n"
+if [[ ! -d "$HOME/.dotstow" ]] then
+    echo ".dotstow exists, continue install progress..."
+else
+    git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
+fi
+echo "===== Done =====\n"
 
 # setup git submodules
 echo "===== Clone git submodules ====="
