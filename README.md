@@ -1,6 +1,6 @@
 # How to setup
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JeremyChuaWX/dotstow/HEAD/install.sh)"
 ```
 
 # Setup
