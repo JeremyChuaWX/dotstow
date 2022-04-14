@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # clone dotfile structure into home
-if [[ ! -d "$HOME/.dotstow" ]] then
+if [[ ! -d "$HOME/.dotstow" ]]; then
     echo ".dotstow exists, continue install progress..."
 else
     git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
