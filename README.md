@@ -1,6 +1,7 @@
 # How to setup
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JeremyChuaWX/dotstow/HEAD/install.sh)"
+# install zsh first!!
+/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JeremyChuaWX/dotstow/HEAD/install.sh)"
 ```
 
 # Setup
