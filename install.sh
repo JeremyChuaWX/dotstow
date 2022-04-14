@@ -11,9 +11,9 @@ echo "===== Done =====\n"
 
 # setup git submodules
 echo "===== Clone git submodules ====="
-echo "--> Initalising submodules"
+echo "--> Initalising submodules..."
 git submodule init
-echo "--> Updating submodules"
+echo "--> Updating submodules..."
 git submodule update
 echo "===== Done =====\n"
 
@@ -28,7 +28,11 @@ if [[ $OSTYPE = "darwin"* ]] then
     #--------------------#
     
     echo "===== Install homebrew ====="
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    if [[ ! $(brew --version) = "Homebrew"* ]] then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+        echo "Homebrew already installed..."
+    fi
     echo "===== Done ====="
 
     #--------------------#
@@ -70,7 +74,7 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         if [[ $(grep "defaultyes" /etc/dnf/dnf.conf) = "" ]] then
             echo "defaultyes=True\nfastestmirror=True\nmax_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
         else
-            echo "dnf options have been set"
+            echo "dnf options have been set..."
         fi
         echo "===== Done =====\n"
 
@@ -140,10 +144,10 @@ fi
 #-- Stow configs -----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-# echo "===== Stow configs ====="
-# cd ~/.dotstow/
-# stow -v -R */
-# echo "===== Done ====="
+echo "===== Stow configs ====="
+cd ~/.dotstow/
+stow -v -R */
+echo "===== Done ====="
 
 #---------------------------------------------------------------------------------------------------
 #-- Npm installs -----------------------------------------------------------------------------------
