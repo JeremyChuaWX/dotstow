@@ -1,5 +1,5 @@
 # How to setup
-- `curl -fsSL https://githubusercontent.com/JeremyChuaWX/dotstow/main/install.sh`
+- `/bin/bash -c $(curl -fsSL https://githubusercontent.com/JeremyChuaWX/dotstow/main/install.sh)`
 
 # Setup
 ## Shell
