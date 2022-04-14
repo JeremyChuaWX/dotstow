@@ -73,3 +73,4 @@ bindkey -s '^T' 'tmux attach -t $(tmux list-sessions -F \\#S | fzf)\n'
 bindkey -s '^D' 'tmux kill-session -t $(tmux list-sessions -F \\#S | fzf)\n'
 bindkey -s '^G' 'git status\n'
 bindkey -M menuselect "${terminfo[kcbt]}" reverse-menu-complete # s-tab to go backwards in compselect
+bindkey -s '^O' 'nvim $(fzf)\n'
