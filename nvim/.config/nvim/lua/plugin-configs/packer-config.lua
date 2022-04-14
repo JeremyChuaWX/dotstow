@@ -48,8 +48,8 @@ return packer.startup(function(use)
     use "JeremyChuaWX/surround.nvim"
 
     -- interface
-    use "akinsho/bufferline.nvim"
-    use "akinsho/toggleterm.nvim"
+    use { "akinsho/bufferline.nvim", branch = "main" }
+    use { "akinsho/toggleterm.nvim", branch = "main" }
     use "nvim-lualine/lualine.nvim"
 
     -- git

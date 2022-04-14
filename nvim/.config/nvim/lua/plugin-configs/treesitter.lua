@@ -4,7 +4,8 @@ if not status_ok then
 end
 
 ts.setup {
-    ensure_installed = "maintained",
+    ensure_installed = "all",
+    ignore_install = { "phpdoc" },
     highlight = {
         enable = true,
         additional_vim_highlighting = true,
