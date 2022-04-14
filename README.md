@@ -26,4 +26,4 @@
 
 # TODO
 - [x] create an `install.sh`
-- [ ] restructure docs into individual READMEs in each folder
+- [ ] separate zsh keybindings into another file
