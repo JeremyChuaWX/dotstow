@@ -1,15 +1,21 @@
 #!/bin/zsh
 
-# clone dotfile structure into home
+#---------------------------------------------------------------------------------------------------
+#-- Clone dotfile structure into home --------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
+
 echo "===== Clone dotstow repo ====="
-if [[ -d "$HOME/.dotstow" ]] then
-    echo ".dotstow exists, continue install progress..."
-else
+if [[ ! -d "$HOME/.dotstow" ]] then
     git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
+else
+    echo ".dotstow exists, continue install progress..."
 fi
 echo "===== Done =====\n"
 
-# setup git submodules
+#---------------------------------------------------------------------------------------------------
+#-- Setup git submodules ---------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
+
 echo "===== Clone git submodules ====="
 echo "--> Initalising submodules..."
 git submodule init
@@ -40,15 +46,26 @@ if [[ $OSTYPE = "darwin"* ]] then
     #--------------------#
     
     echo "===== Installing apps ====="
-    brew install alacritty
+    sudo -u $USER brew install alacritty
     echo "===== Done ====="
 
     echo "===== Installing text editors ====="
-    brew install neovim
+    sudo -u $USER brew install neovim
     echo "===== Done ====="
 
     echo "===== Installing utilities ====="
-    brew install node python3 fzf git ripgrep tree tmux stow
+    sudo -u $USER brew install node python3 fzf git ripgrep tree tmux stow
+    echo "===== Done ====="
+
+    #----------------#
+    #- Stow configs -#
+    #----------------#
+
+    echo "===== Stow configs ====="
+    cd ~/.dotstow
+    pwd
+    stow -v -R --ignore=awesomewm */
+    cd ~
     echo "===== Done ====="
 
 fi
@@ -145,19 +162,19 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
         echo "===== Done =====\n"
 
+        #----------------#
+        #- Stow configs -#
+        #----------------#
+
+        echo "===== Stow configs ====="
+        cd ~/.dotstow/
+        stow -v -R */
+        cd ~
+        echo "===== Done ====="
+
     fi
 
 fi
-
-
-#---------------------------------------------------------------------------------------------------
-#-- Stow configs -----------------------------------------------------------------------------------
-#---------------------------------------------------------------------------------------------------
-
-echo "===== Stow configs ====="
-cd ~/.dotstow/
-stow -v -R */
-echo "===== Done ====="
 
 #---------------------------------------------------------------------------------------------------
 #-- Npm installs -----------------------------------------------------------------------------------
