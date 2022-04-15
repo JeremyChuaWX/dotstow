@@ -54,7 +54,8 @@ if [[ $OSTYPE = "darwin"* ]] then
     echo "===== Done ====="
 
     echo "===== Installing utilities ====="
-    sudo -u $USER brew install node python3 fzf git ripgrep tree tmux stow
+    sudo -u $USER brew install node python3 fzf git ripgrep tree tmux stow # utils
+    sudo -u $USER brew install black # linters
     echo "===== Done ====="
 
     #----------------#
