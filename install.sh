@@ -123,6 +123,11 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         sudo dnf -y install vim neovim
         echo "===== Done =====\n"
 
+        # window manager
+        echo "===== Installing window managers ====="
+        sudo dnf -y install awesome nitrogen
+        echo "===== Done =====\n"
+
         # utilities
         echo "===== Installing utilities ====="
         sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep gcc-c++
@@ -130,10 +135,15 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
         # other apps
         echo "===== Installing other apps ====="
+        # discord
         sudo dnf -y install discord
+
+        # librewolf
         sudo rpm --import https://keys.openpgp.org/vks/v1/by-fingerprint/034F7776EF5E0C613D2F7934D29FBD5F93C0CFC3
         sudo dnf -y config-manager --add-repo https://rpm.librewolf.net
         sudo dnf -y install librewolf
+
+        echo "===== Done =====\n"
 
     fi
 
