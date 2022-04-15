@@ -17,3 +17,6 @@ alias dstow="cd $HOME/.dotstow"
 
 # tmux
 alias nmux="tmux new-session -s"
+
+# git
+alias gitc="git commit -m "
