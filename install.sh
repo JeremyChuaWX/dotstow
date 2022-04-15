@@ -5,11 +5,13 @@
 #---------------------------------------------------------------------------------------------------
 
 echo "===== Clone dotstow repo ====="
+
 if [[ ! -d "$HOME/.dotstow" ]] then
-    git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
+    sudo -u $SUDO_USER git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
 else
     echo ".dotstow exists, continue install progress..."
 fi
+
 echo "===== Done =====\n"
 
 #---------------------------------------------------------------------------------------------------
@@ -18,9 +20,9 @@ echo "===== Done =====\n"
 
 echo "===== Clone git submodules ====="
 echo "--> Initalising submodules..."
-git submodule init
+sudo -u $SUDO_USER git submodule init
 echo "--> Updating submodules..."
-git submodule update
+sudo -u $SUDO_USER git submodule update
 echo "===== Done =====\n"
 
 #---------------------------------------------------------------------------------------------------
@@ -29,16 +31,41 @@ echo "===== Done =====\n"
 
 if [[ $OSTYPE = "darwin"* ]] then
 
+    #------------------------#
+    #- System configuration -#
+    #------------------------#
+
+    echo "===== Setting system configurations ====="
+    # Set fast key repeat rate
+    defaults write NSGlobalDomain KeyRepeat -int 0
+
+    # Require password as soon as screensaver or sleep mode starts
+    defaults write com.apple.screensaver askForPassword -int 1
+    defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+    # Show filename extensions by default
+    defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+    # Enable tap-to-click
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+    defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+    echo "===== Done ====="
+
     #--------------------#
     #- Install homebrew -#
     #--------------------#
     
     echo "===== Install homebrew ====="
-    if [[ ! $(brew --version) = "Homebrew"* ]] then
+
+    if [[ ! $(which brew) ]] then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     else
         echo "Homebrew already installed..."
     fi
+
+    sudo -u $SUDO_USER brew update
+
     echo "===== Done ====="
 
     #--------------------#
@@ -46,27 +73,16 @@ if [[ $OSTYPE = "darwin"* ]] then
     #--------------------#
     
     echo "===== Installing apps ====="
-    sudo -u $USER brew install alacritty
+    sudo -u $SUDO_USER brew install alacritty
     echo "===== Done ====="
 
     echo "===== Installing text editors ====="
-    sudo -u $USER brew install neovim
+    sudo -u $SUDO_USER brew install neovim
     echo "===== Done ====="
 
     echo "===== Installing utilities ====="
-    sudo -u $USER brew install node python3 fzf git ripgrep tree tmux stow # utils
-    sudo -u $USER brew install black # linters
-    echo "===== Done ====="
-
-    #----------------#
-    #- Stow configs -#
-    #----------------#
-
-    echo "===== Stow configs ====="
-    cd ~/.dotstow
-    pwd
-    stow -v -R --ignore=awesomewm */
-    cd ~
+    sudo -u $SUDO_USER brew install node python3 fzf git ripgrep tree tmux stow # utils
+    sudo -u $SUDO_USER brew install black # linters
     echo "===== Done ====="
 
 fi
@@ -163,28 +179,30 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
         echo "===== Done =====\n"
 
-        #----------------#
-        #- Stow configs -#
-        #----------------#
-
-        echo "===== Stow configs ====="
-        cd ~/.dotstow/
-        stow -v -R */
-        cd ~
-        echo "===== Done ====="
-
     fi
 
 fi
 
 #---------------------------------------------------------------------------------------------------
+#-- Stow configs -----------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------
+
+echo "===== Stowing configs ====="
+stow -v -R */
+echo "===== Done =====\n"
+
+#---------------------------------------------------------------------------------------------------
 #-- Npm installs -----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
+echo "===== Installing global npm packages ====="
 sudo npm -g i npm typescript create-react-app neovim
+echo "===== Done =====\n"
 
 #---------------------------------------------------------------------------------------------------
 #-- Pip installs -----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-pip3 install neovim
+echo "===== Installing pip packages ====="
+sudo -u $SUDO_USER pip3 install neovim
+echo "===== Done =====\n"
