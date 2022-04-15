@@ -16,7 +16,7 @@ require "plugin-configs.lualine"
 require "plugin-configs.lsp"
 
 -- cmp
-require "plugin-configs.nvimcmp"
+require "plugin-configs.cmp"
 
 -- git
 require "plugin-configs.gitsigns"

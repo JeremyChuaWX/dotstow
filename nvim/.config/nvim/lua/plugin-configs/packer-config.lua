@@ -10,6 +10,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
         "https://github.com/wbthomason/packer.nvim",
         install_path
     }
+    print "Installing packer close and reopen Neovim..."
+    vim.cmd [[packadd packer.nvim]]
 end
 
 local status_ok, packer = pcall(require, "packer")
@@ -30,7 +32,7 @@ packer.init {
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost packer-config.lua source <afile> | PackerCompile
+    autocmd BufWritePost packer-config.lua source <afile> | PackerSync
   augroup end
 ]])
 
