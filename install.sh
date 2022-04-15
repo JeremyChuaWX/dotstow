@@ -2,7 +2,7 @@
 
 # clone dotfile structure into home
 echo "===== Clone dotstow repo ====="
-if [[ ! -d "$HOME/.dotstow" ]] then
+if [[ -d "$HOME/.dotstow" ]] then
     echo ".dotstow exists, continue install progress..."
 else
     git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
