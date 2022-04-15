@@ -93,7 +93,7 @@ fi
 
 if [[ $OSTYPE = "linux-gnu" ]] then
 
-    if [[ ! $(dnf --version) = "zsh"* ]] then
+    if [[ $(which dnf) ]] then
 
         echo "==============================="
         echo "===== dnf system detected ====="
@@ -107,8 +107,9 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         echo "===== Writing sane options to dnf.conf ====="
         if [[ $(grep "defaultyes" /etc/dnf/dnf.conf) = "" ]] then
             echo "defaultyes=True\nfastestmirror=True\nmax_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
-        else
             echo "dnf options have been set..."
+        else
+            echo "dnf options already set..."
         fi
         echo "===== Done =====\n"
 
@@ -164,7 +165,7 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
         # utilities
         echo "===== Installing utilities ====="
-        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep gcc-c++
+        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep gcc-c++ black
         echo "===== Done =====\n"
 
         # other apps
