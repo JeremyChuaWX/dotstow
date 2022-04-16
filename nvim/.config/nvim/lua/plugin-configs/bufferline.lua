@@ -5,15 +5,16 @@ end
 
 bufferline.setup {
     options = {
-        numbers = function (opts)
-            return string.format("%s", opts.id)
-        end,
+        -- numbers = function (opts)
+        --     return string.format("%s", opts.id)
+        -- end,
+        numbers = "none",
         diagnostics = "nvim_lsp",
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
             local s = " "
             for e, n in pairs(diagnostics_dict) do
                 local sym = e == "error" and " "
-                or (e == "warning" and " " or "" )
+                    or (e == "warning" and " " or "")
                 s = s .. n .. sym
             end
             return s
@@ -29,7 +30,7 @@ bufferline.setup {
 }
 
 -- keymaps
-local set = vim.api.nvim_set_keymap
+local set = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 set("n", "L", ":BufferLineCycleNext<CR>", opts)
