@@ -30,7 +30,7 @@ bufferline.setup {
 }
 
 -- keymaps
-local set = vim.keymap.set
+local set = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 set("n", "L", ":BufferLineCycleNext<CR>", opts)
