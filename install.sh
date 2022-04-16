@@ -36,12 +36,6 @@ if [[ $OSTYPE = "darwin"* ]] then
     #------------------------#
 
     echo "===== Setting system configurations ====="
-    # Set fast key repeat rate
-    defaults write NSGlobalDomain KeyRepeat -int 0
-
-    # Require password as soon as screensaver or sleep mode starts
-    defaults write com.apple.screensaver askForPassword -int 1
-    defaults write com.apple.screensaver askForPasswordDelay -int 0
 
     # Show filename extensions by default
     defaults write NSGlobalDomain AppleShowAllExtensions -bool true
