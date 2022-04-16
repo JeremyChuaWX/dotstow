@@ -4,7 +4,7 @@ local options = {
     -------------
     compatible = false,
     syntax = "on",
-    clipboard = "unnamed,unnamedplus",
+    clipboard = { "unnamed", "unnamedplus", },
     ttyfast = true,
     lazyredraw = true,
     updatetime = 50,
@@ -50,7 +50,7 @@ local options = {
     splitbelow = true,
     splitright = true,
     signcolumn = "yes",
-    completeopt = {"menuone", "noselect", "menu"},
+    completeopt = { "menu", "menuone", "noselect", },
     colorcolumn = "100",
 
     ------------
