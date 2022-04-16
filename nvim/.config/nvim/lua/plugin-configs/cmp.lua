@@ -21,7 +21,7 @@ cmp.setup({
             luasnip.lsp_expand(args.body)
         end,
     },
-    mapping = cmp.mapping.preset.insert({
+    mapping = {
         ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
         ['<C-e>'] = cmp.mapping({
             i = cmp.mapping.abort(),
@@ -54,7 +54,7 @@ cmp.setup({
             end
         end,
         { 'i', 's' }),
-    }),
+    },
     sources = {
         { name = 'nvim_lsp_signature_help' },
         { name = 'luasnip' },
@@ -67,7 +67,6 @@ cmp.setup({
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
-    mapping = cmp.mapping.preset.cmdline(),
     sources = {
         { name = 'buffer' }
     }
@@ -75,7 +74,6 @@ cmp.setup.cmdline('/', {
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
     sources = {
         { name = 'path' },
         { name = 'cmdline' },
