@@ -32,9 +32,9 @@ local options = {
     -- tab completion --
     --------------------
     wildmenu = true,
-    wildignore = vim.opt.wildignore + {".git", ".DS_Store"},
+    wildignore = vim.opt.wildignore + { ".git", ".DS_Store", },
     wildignorecase = true,
-    wildmode = {"list", "longest"},
+    wildmode = { "list", "longest", },
 
     ---------------
     -- interface --
@@ -62,7 +62,7 @@ local options = {
     -- matchpairs = vim.opt.matchpairs + "<:>",
     whichwrap = "b,s,<,>,[,]",
     joinspaces = false,
-    backspace = {"indent", "eol", "start"},
+    backspace = { "indent", "eol", "start", },
     foldlevelstart = 99,
 
     ---------------------

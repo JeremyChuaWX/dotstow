@@ -11,9 +11,6 @@ vim.g.mapleader = " "
 -- #-core-#
 -- #------#
 
--- netrw
-set("n", "<leader>e", ":15Lexplore<CR>", opts)
-
 -- split navigation
 set("n", "<C-h>", "<C-w>h", opts)
 set("n", "<C-j>", "<C-w>j", opts)
