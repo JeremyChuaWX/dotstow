@@ -4,7 +4,7 @@
 #-- Clone dotfile structure into home --------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-echo "===== Clone dotstow repo ====="
+echo "\n===== Clone dotstow repo ====="
 HOME=$(eval echo ~$SUDO_USER)
 
 if [[ ! -d "$HOME/.dotstow" ]] then
@@ -15,11 +15,16 @@ fi
 
 echo "===== Done =====\n"
 
+# cd to .dotstow
+cd $HOME/.dotstow/
+echo "cd into dotstow dir..."
+pwd
+
 #---------------------------------------------------------------------------------------------------
 #-- Setup git submodules ---------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-echo "===== Clone git submodules ====="
+echo "\n===== Clone git submodules ====="
 echo "--> Initalising submodules..."
 sudo -u $SUDO_USER git submodule init
 echo "--> Updating submodules..."
@@ -36,7 +41,7 @@ if [[ $OSTYPE = "darwin"* ]] then
     #- System configuration -#
     #------------------------#
 
-    echo "===== Setting system configurations ====="
+    echo "\n===== Setting system configurations ====="
 
     # Faster key repeat
     defaults write NSGlobalDomain KeyRepeat -int 2
@@ -48,13 +53,13 @@ if [[ $OSTYPE = "darwin"* ]] then
     defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
     defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-    echo "===== Done ====="
+    echo "===== Done =====\n"
 
     #--------------------#
     #- Install homebrew -#
     #--------------------#
     
-    echo "===== Install homebrew ====="
+    echo "\n===== Install homebrew ====="
 
     if [[ ! $(which brew) ]] then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -64,24 +69,24 @@ if [[ $OSTYPE = "darwin"* ]] then
 
     sudo -u $SUDO_USER brew update
 
-    echo "===== Done ====="
+    echo "===== Done =====\n"
 
     #--------------------#
     #- Install packages -#
     #--------------------#
     
-    echo "===== Installing apps ====="
+    echo "\n===== Installing apps ====="
     sudo -u $SUDO_USER brew install alacritty
-    echo "===== Done ====="
+    echo "===== Done =====\n"
 
-    echo "===== Installing text editors ====="
+    echo "\n===== Installing text editors ====="
     sudo -u $SUDO_USER brew install neovim
-    echo "===== Done ====="
+    echo "===== Done =====\n"
 
-    echo "===== Installing utilities ====="
+    echo "\n===== Installing utilities ====="
     sudo -u $SUDO_USER brew install node python3 fzf git ripgrep tree tmux stow # utils
-    sudo -u $SUDO_USER brew install black prettier # linters
-    echo "===== Done ====="
+    sudo -u $SUDO_USER brew install black # linters
+    echo "===== Done =====\n"
 
 fi
 
@@ -93,16 +98,16 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
     if [[ $(which dnf) ]] then
 
-        echo "==============================="
+        echo "\n==============================="
         echo "===== dnf system detected ====="
-        echo "==============================="
+        echo "===============================\n"
 
         #---------------#
         #- First steps -#
         #---------------#
 
         # writing sane options to dnf
-        echo "===== Writing sane options to dnf.conf ====="
+        echo "\n===== Writing sane options to dnf.conf ====="
         if [[ $(grep "defaultyes" /etc/dnf/dnf.conf) = "" ]] then
             echo "defaultyes=True\nfastestmirror=True\nmax_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
             echo "dnf options have been set..."
@@ -115,7 +120,7 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         #- Update system -#
         #-----------------#
 
-        echo "===== Updating system ====="
+        echo "\n===== Updating system ====="
         sudo dnf -y update
         echo "===== Done =====\n"
 
@@ -124,20 +129,20 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         #--------------------#
         
         # rpm fusion
-        echo "===== Installing rpm fusion repos ====="
+        echo "\n===== Installing rpm fusion repos ====="
         sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
         sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         echo "===== Done =====\n"
 
         # media codecs
-        echo "===== Installing media codecs ====="
+        echo "\n===== Installing media codecs ====="
         sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
         sudo dnf -y install lame\* --exclude=lame-devel
         sudo dnf -y group upgrade --with-optional Multimedia
         echo "===== Done =====\n"
 
         # nvidia drivers
-        echo "===== Installing nvidia drivers ====="
+        echo "\n===== Installing nvidia drivers ====="
         if [[ $(sudo lspci | grep "VGA") = "" ]] then
             echo "no nvidia card"
         else
@@ -147,28 +152,28 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         echo "===== Done =====\n"
         
         # other package managers
-        echo "===== Installing other package managers ====="
+        echo "\n===== Installing other package managers ====="
         sudo dnf -y install python3-pip nodejs
         echo "===== Done =====\n"
 
         # text editors
-        echo "===== Installing text editors ====="
+        echo "\n===== Installing text editors ====="
         sudo dnf -y install vim neovim python3-neovim
         echo "===== Done =====\n"
 
         # window manager
-        echo "===== Installing window managers ====="
+        echo "\n===== Installing window managers ====="
         sudo dnf -y install awesome nitrogen
         echo "===== Done =====\n"
 
         # utilities
-        echo "===== Installing utilities ====="
+        echo "\n===== Installing utilities ====="
         sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep gcc-c++ # utils
-        sudo dnf -y install black prettier # linters
+        sudo dnf -y install black # linters
         echo "===== Done =====\n"
 
         # other apps
-        echo "===== Installing other apps ====="
+        echo "\n===== Installing other apps ====="
         # discord
         sudo dnf -y install discord
 
@@ -187,7 +192,7 @@ fi
 #-- Stow configs -----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-echo "===== Stowing configs ====="
+echo "\n===== Stowing configs ====="
 stow -vvvvv -R */
 echo "===== Done =====\n"
 
@@ -195,7 +200,7 @@ echo "===== Done =====\n"
 #-- Npm installs -----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-echo "===== Installing global npm packages ====="
+echo "\n===== Installing global npm packages ====="
 sudo npm -g i npm typescript create-react-app neovim prettier
 echo "===== Done =====\n"
 
@@ -203,6 +208,6 @@ echo "===== Done =====\n"
 #-- Pip installs -----------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-echo "===== Installing pip packages ====="
+echo "\n===== Installing pip packages ====="
 sudo -u $SUDO_USER pip3 install neovim
 echo "===== Done =====\n"
