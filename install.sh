@@ -37,6 +37,9 @@ if [[ $OSTYPE = "darwin"* ]] then
 
     echo "===== Setting system configurations ====="
 
+    # Faster key repeat
+    defaults write NSGlobalDomain KeyRepeat -int 2
+
     # Show filename extensions by default
     defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
