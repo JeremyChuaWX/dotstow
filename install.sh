@@ -79,7 +79,7 @@ if [[ $OSTYPE = "darwin"* ]] then
 
     echo "===== Installing utilities ====="
     sudo -u $SUDO_USER brew install node python3 fzf git ripgrep tree tmux stow # utils
-    sudo -u $SUDO_USER brew install black # linters
+    sudo -u $SUDO_USER brew install black prettier # linters
     echo "===== Done ====="
 
 fi
@@ -162,7 +162,8 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
         # utilities
         echo "===== Installing utilities ====="
-        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep gcc-c++ black
+        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep gcc-c++ # utils
+        sudo dnf -y install black prettier # linters
         echo "===== Done =====\n"
 
         # other apps
@@ -186,7 +187,7 @@ fi
 #---------------------------------------------------------------------------------------------------
 
 echo "===== Stowing configs ====="
-stow -v -R */
+stow -vvvvv -R */
 echo "===== Done =====\n"
 
 #---------------------------------------------------------------------------------------------------
