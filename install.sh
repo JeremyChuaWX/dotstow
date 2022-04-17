@@ -5,9 +5,9 @@
 #---------------------------------------------------------------------------------------------------
 
 echo "\n===== Clone dotstow repo ====="
-HOME=$(eval echo ~$SUDO_USER)
+USER_HOME=~$SUDO_USER
 
-if [[ ! -d "$HOME/.dotstow" ]] then
+if [[ ! -d "$USER_HOME/.dotstow" ]] then
     sudo -u $SUDO_USER git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
 else
     echo ".dotstow exists, continue install progress..."
@@ -16,7 +16,7 @@ fi
 echo "===== Done =====\n"
 
 # cd to .dotstow
-cd $HOME/.dotstow/
+cd $USER_HOME/.dotstow/
 echo "cd into dotstow dir..."
 pwd
 
