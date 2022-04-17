@@ -5,6 +5,7 @@
 #---------------------------------------------------------------------------------------------------
 
 echo "===== Clone dotstow repo ====="
+HOME=$(eval echo ~$SUDO_USER)
 
 if [[ ! -d "$HOME/.dotstow" ]] then
     sudo -u $SUDO_USER git clone https://github.com/JeremyChuaWX/dotstow.git .dotstow
@@ -152,7 +153,7 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
         # text editors
         echo "===== Installing text editors ====="
-        sudo dnf -y install vim neovim
+        sudo dnf -y install vim neovim python3-neovim
         echo "===== Done =====\n"
 
         # window manager
@@ -195,7 +196,7 @@ echo "===== Done =====\n"
 #---------------------------------------------------------------------------------------------------
 
 echo "===== Installing global npm packages ====="
-sudo npm -g i npm typescript create-react-app neovim
+sudo npm -g i npm typescript create-react-app neovim prettier
 echo "===== Done =====\n"
 
 #---------------------------------------------------------------------------------------------------
