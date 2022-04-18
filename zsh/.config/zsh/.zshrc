@@ -69,7 +69,13 @@ zsh_add_plugin "hlissner/zsh-autopair"
 #-keybinds-#
 #----------#
 
+# menu selection
 bindkey -M menuselect "${terminfo[kcbt]}" reverse-menu-complete # s-tab to go backwards in compselect
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+
 bindkey -s '^T' 'tmux attach -t $(tmux list-sessions -F \\#S | fzf)\n'
 bindkey -s '^D' 'tmux kill-session -t $(tmux list-sessions -F \\#S | fzf)\n'
 bindkey -s '^O' 'nvim $(fzf)\n'
