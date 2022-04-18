@@ -1,11 +1,16 @@
-# brew
-alias brewu="brew update && brew upgrade"
-alias brewc="brew cleanup && brew autoremove"
+if [[ $OSTYPE = "darwin"* ]] then
+    # brew
+    alias brewu="brew update && brew upgrade"
+    alias brewc="brew cleanup && brew autoremove"
+fi
 
-# directory viewing
-alias ll="ls -A -l --color"
-alias cdls="cd && ls"
-alias atree="tree -a"
+# directories
+alias ll="ls -AlF --color=auto"
+alias ..="cd .."
+
+# files
+alias rm="rm -i"
+alias mv="mv -i"
 
 # colourise grep output (good for log files)
 alias grep="grep --color=auto"
@@ -19,4 +24,6 @@ alias dstow="cd $HOME/.dotstow"
 alias nmux="tmux new-session -s"
 
 # git
-alias gitc="git commit -m "
+alias gc="git commit -m "
+alias ga="git add "
+alias gs="git status "
