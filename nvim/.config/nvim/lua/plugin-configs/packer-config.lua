@@ -43,6 +43,7 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
     use "kyazdani42/nvim-web-devicons"
+    use "onsails/lspkind.nvim"
 
     -- editor
     use "lukas-reineke/indent-blankline.nvim"

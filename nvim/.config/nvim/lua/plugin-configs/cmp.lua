@@ -8,6 +8,11 @@ if not snip_status_ok then
     return
 end
 
+local lsp_kind_status_ok, lspkind = pcall(require, 'lspkind')
+if not lsp_kind_status_ok then
+    return
+end
+
 require('luasnip.loaders.from_vscode').lazy_load()
 
 local check_back_space = function()
@@ -64,6 +69,21 @@ cmp.setup({
         { name = 'path' },
         { name = 'buffer' },
     },
+    formatting = {
+        format = lspkind.cmp_format({with_text = true}),
+        menu = {
+            buffer = "[buf]",
+            nvim_lsp = "[LSP]",
+            nvim_lua = "[api]",
+            path = "[path]",
+            luasnip = '[snip]',
+        },
+    },
+
+    confirm_opts = {
+        behaviour = cmp.ConfirmBehavior.Replace,
+        select = false,
+    }
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
