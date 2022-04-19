@@ -70,16 +70,17 @@ cmp.setup({
         { name = 'buffer' },
     },
     formatting = {
-        format = lspkind.cmp_format({with_text = true}),
-        menu = {
-            buffer = "[buf]",
-            nvim_lsp = "[LSP]",
-            nvim_lua = "[api]",
-            path = "[path]",
-            luasnip = '[snip]',
+        format = lspkind.cmp_format {
+            with_text = true,
+            menu = {
+                buffer = "[buf]",
+                nvim_lsp = "[LSP]",
+                nvim_lua = "[API]",
+                path = "[path]",
+                luasnip = '[snip]',
+            },
         },
     },
-
     confirm_opts = {
         behaviour = cmp.ConfirmBehavior.Replace,
         select = false,
