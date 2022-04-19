@@ -104,8 +104,3 @@ for k, v in pairs(options) do
 end
 
 -- let g:loaded_clipboard_provider="clipboard-x11"
-if vim.fn.has "unix" == 1 then
-    vim.cmd [[
-        let g:loaded_clipboard_provider="clipboard-x11"
-    ]]
-end
