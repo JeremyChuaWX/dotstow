@@ -80,7 +80,7 @@ return packer.startup(function(use)
     use "rafamadriz/friendly-snippets"
 
     -- cmp
-    use { "hrsh7th/nvim-cmp", commit = "3192a0c57837c1ec5bf298e4f3ec984c7d2d60c0" }
+    use "hrsh7th/nvim-cmp"
 
     -- cmp sources
     use "hrsh7th/cmp-buffer"
