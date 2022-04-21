@@ -6,4 +6,4 @@ end
 require('plugin-configs.lsp.handlers').setup()
 require('plugin-configs.lsp.lsp-installer')
 require('plugin-configs.lsp.null-ls')
-require('plugin-configs.lsp.lsp_signature')
+require('plugin-configs.lsp.lsp-signature')
