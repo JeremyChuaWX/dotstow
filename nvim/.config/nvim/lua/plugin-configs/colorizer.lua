@@ -3,7 +3,13 @@ if not status_ok then
     return
 end
 
-colorizer.setup {
-    -- file types
-    html = { mode = "foreground", },
-}
+colorizer.setup(
+    {
+        "*", -- highlight all filetypes, but customise others
+        html = { mode = "foreground" },
+        css = { css = true },
+    },
+    {
+        names = false,
+    }
+)
