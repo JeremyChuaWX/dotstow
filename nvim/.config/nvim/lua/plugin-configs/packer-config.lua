@@ -75,6 +75,9 @@ return packer.startup(function(use)
     -- java
     use "mfussenegger/nvim-jdtls"
 
+    -- json
+    use "b0o/schemastore.nvim"
+
     -- snippets
     use "L3MON4D3/LuaSnip"
     use "rafamadriz/friendly-snippets"
