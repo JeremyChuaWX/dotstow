@@ -1,19 +1,34 @@
-require('kanagawa').setup({
-    undercurl = true,           -- enable undercurls
-    commentStyle = "italic",
-    functionStyle = "NONE",
-    keywordStyle = "italic",
-    statementStyle = "bold",
-    typeStyle = "NONE",
-    variablebuiltinStyle = "italic",
-    specialReturn = true,       -- special highlight for the return keyword
-    specialException = true,    -- special highlight for exception handling keywords
-    transparent = false,        -- do not set background color
-    dimInactive = false,        -- dim inactive window `:h hl-NormalNC`
-    globalStatus = true,       -- adjust window separators highlight for laststatus=3
-    colors = {},
-    overrides = {},
+vim.opt.fillchars:append({
+    horiz = '━',
+    horizup = '┻',
+    horizdown = '┳',
+    vert = '┃',
+    vertleft = '┨',
+    vertright = '┣',
+    verthoriz = '╋',
 })
+
+local kanagawa_status_ok, kanagawa = pcall(require, "kanagawa")
+if not kanagawa_status_ok then
+    return
+else
+    kanagawa.setup({
+        undercurl = true,           -- enable undercurls
+        commentStyle = "italic",
+        functionStyle = "NONE",
+        keywordStyle = "italic",
+        statementStyle = "bold",
+        typeStyle = "NONE",
+        variablebuiltinStyle = "italic",
+        specialReturn = true,       -- special highlight for the return keyword
+        specialException = true,    -- special highlight for exception handling keywords
+        transparent = false,        -- do not set background color
+        dimInactive = true,        -- dim inactive window `:h hl-NormalNC`
+        globalStatus = true,       -- adjust window separators highlight for laststatus=3
+        colors = {},
+        overrides = {},
+    })
+end
 
 local colorscheme = "kanagawa"
 
