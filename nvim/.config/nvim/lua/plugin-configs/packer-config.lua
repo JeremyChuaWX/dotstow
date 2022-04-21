@@ -49,6 +49,7 @@ return packer.startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     use "windwp/nvim-autopairs"
     use "JeremyChuaWX/surround.nvim"
+    use "norcalli/nvim-colorizer.lua"
 
     -- interface
     use { "akinsho/bufferline.nvim", branch = "main" }
