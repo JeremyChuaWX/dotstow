@@ -30,3 +30,4 @@ sudo /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JeremyChuaWX/do
 # TODO
 - [ ] separate zsh keybindings into another file
 - [ ] check if brew exists before installing
+- [ ] set up nvim-dap
