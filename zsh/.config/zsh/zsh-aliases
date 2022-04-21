@@ -26,5 +26,7 @@ alias nmux="tmux new-session -s"
 # git
 alias gc="git commit -m "
 alias ga="git add "
+alias gall="git add --all"
 alias gs="git status"
 alias gp="git push"
+alias gu="git pull --rebase"
