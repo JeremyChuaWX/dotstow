@@ -7,6 +7,7 @@ fi
 # directories
 alias ll="ls -AlF --color=auto"
 alias ..="cd .."
+alias fz="fuzzy_cd"
 
 # files
 alias rm="rm -i"
@@ -24,8 +25,8 @@ alias dstow="cd $HOME/.dotstow"
 alias nmux="tmux new-session -s"
 
 # git
-alias gc="git commit -m "
-alias ga="git add "
+alias gc="git commit -m"
+alias ga="git add"
 alias gall="git add --all"
 alias gs="git status"
 alias gp="git push"

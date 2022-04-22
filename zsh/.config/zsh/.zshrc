@@ -78,4 +78,4 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 
 bindkey -s '^T' 'tmux attach -t $(tmux list-sessions -F \\#S | fzf)\n'
 bindkey -s '^D' 'tmux kill-session -t $(tmux list-sessions -F \\#S | fzf)\n'
-bindkey -s '^O' 'nvim $(fzf)\n'
+bindkey -s '^O' 'fuzzy_open\n'
