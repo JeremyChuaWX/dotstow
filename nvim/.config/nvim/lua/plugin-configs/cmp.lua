@@ -24,7 +24,7 @@ local check_back_space = function()
     end
 end
 
-cmp.setup({
+cmp.setup {
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -89,7 +89,7 @@ cmp.setup({
         behaviour = cmp.ConfirmBehavior.Replace,
         select = false,
     }
-})
+}
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won"t work anymore).
 cmp.setup.cmdline("/", {
