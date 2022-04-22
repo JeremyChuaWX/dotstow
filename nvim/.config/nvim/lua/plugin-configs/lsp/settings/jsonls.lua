@@ -9,6 +9,7 @@ return {
             schemas = schemastore.json.schemas {
                 select = {
                     "package.json",
+                    "tsconfig.json",
                 },
             },
         },
