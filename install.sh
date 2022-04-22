@@ -168,7 +168,7 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
         # utilities
         echo "\n===== Installing utilities ====="
-        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd gcc-c++ # utils
+        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd-find gcc-c++ # utils
         sudo dnf -y install black # linters
         echo "===== Done =====\n"
 
