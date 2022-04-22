@@ -9,15 +9,28 @@ telescope.setup {
     },
     extensions = {
         fzf = {
-            fuzzy = true,                    -- false will only do exact matching
-            override_generic_sorter = true,  -- override the generic sorter
-            override_file_sorter = true,     -- override the file sorter
-            case_mode = "smart_case",        -- or "ignore_case" or "respect_case", default is "smart_case"
-        }
+            fuzzy = true, -- false will only do exact matching
+            override_generic_sorter = true, -- override the generic sorter
+            override_file_sorter = true, -- override the file sorter
+            case_mode = "smart_case", -- or "ignore_case" or "respect_case", default is "smart_case"
+        },
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+                -- even more opts
+            }
+        },
+        media_files = {
+            -- filetypes whitelist
+            -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+            filetypes = { "png", "webp", "jpg", "jpeg" },
+            find_cmd = "rg" -- find command (defaults to `fd`)
+        },
     }
 }
 
 telescope.load_extension("fzf")
+telescope.load_extension("ui-select")
+telescope.load_extension("media_files")
 
 -- keymaps
 local set = vim.api.nvim_set_keymap
@@ -27,7 +40,7 @@ set("n", "tt", ":Telescope<CR>", opts)
 set("n", "tf", ":lua require'telescope.builtin'.find_files{}<CR>", opts)
 set("n", "tg", ":lua require'telescope.builtin'.live_grep{}<CR>", opts)
 set("n", "tr", ":lua require'telescope.builtin'.lsp_references{}<CR>", opts)
--- set("n", "td", ":lua require'telescope.builtin'.lsp_definitions{}<CR>", opts)
 set("n", "ts", ":lua require'telescope.builtin'.lsp_document_symbols{}<CR>", opts)
-set("n", "ta", ":lua require'telescope.builtin'.lsp_code_actions{}<CR>", opts)
 set("n", "th", ":lua require'telescope.builtin'.help_tags{}<CR>", opts)
+-- set("n", "td", ":lua require'telescope.builtin'.lsp_definitions{}<CR>", opts)
+-- set("n", "ta", ":lua require'telescope.builtin'.lsp_code_actions{}<CR>", opts)
