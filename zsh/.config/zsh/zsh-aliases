@@ -7,7 +7,6 @@ fi
 # directories
 alias ll="ls -AlF --color=auto"
 alias ..="cd .."
-alias fz="fuzzy_cd"
 
 # files
 alias rm="rm -i"
@@ -19,7 +18,8 @@ alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
 # shortcuts
-alias dstow="cd $HOME/.dotstow"
+alias dstow="cd $HOME/.dotstow/"
+alias dev="cd $HOME/Documents/Development/"
 
 # tmux
 alias nmux="tmux new-session -s"

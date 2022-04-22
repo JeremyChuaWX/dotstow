@@ -30,8 +30,8 @@ function zsh_add_completion() {
 }
 
 function fuzzy_cd() {
-    STR=$(fd -H $1 | fzf)
-    echo $STR
+    STR=$(fd -H --type directory | fzf)
+    [[ -d $STR ]] && cd $STR
 }
 
 function fuzzy_open() {
