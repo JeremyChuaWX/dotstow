@@ -15,6 +15,7 @@ require "plugin-configs.lualine"
 
 -- lsp
 require "plugin-configs.lsp"
+require "plugin-configs.symbols-outline"
 
 -- cmp
 require "plugin-configs.cmp"
