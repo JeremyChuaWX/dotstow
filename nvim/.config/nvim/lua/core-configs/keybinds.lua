@@ -29,3 +29,6 @@ set("n", "Y", "y$", opts)
 
 -- easy toggle fold
 set("n", "Z", "za", opts)
+
+-- noh
+set("n", "<ESC><ESC>", ":noh<CR>", opts)
