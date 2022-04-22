@@ -56,6 +56,7 @@ return packer.startup(function(use)
     use { "akinsho/bufferline.nvim", branch = "main" }
     use { "akinsho/toggleterm.nvim", branch = "main" }
     use "nvim-lualine/lualine.nvim"
+    use "simrat39/symbols-outline.nvim"
 
     -- git
     use "lewis6991/gitsigns.nvim"
@@ -67,13 +68,13 @@ return packer.startup(function(use)
 
     -- treesitter
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+    use "SmiteshP/nvim-gps"
 
     -- lsp
     use "neovim/nvim-lspconfig"
     use "williamboman/nvim-lsp-installer"
     use "jose-elias-alvarez/null-ls.nvim"
     use "ray-x/lsp_signature.nvim"
-    use "simrat39/symbols-outline.nvim"
 
     -- java
     use "mfussenegger/nvim-jdtls"

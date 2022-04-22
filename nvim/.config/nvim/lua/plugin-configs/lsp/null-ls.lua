@@ -11,7 +11,10 @@ null_ls.setup {
     debug = false,
     sources = {
         formatting.black.with({ extra_args = { "--fast" } }),
-        formatting.prettier.with({ extra_args = { "--no-semi" } }),
+        formatting.prettier.with {
+            extra_args = { "--no-semi" },
+            extra_filetypes = { "solidity" },
+        },
         actions.gitsigns,
     },
 }
