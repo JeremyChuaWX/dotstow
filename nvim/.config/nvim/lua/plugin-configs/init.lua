@@ -10,7 +10,6 @@ require "plugin-configs.colorizer"
 -- interface
 require "plugin-configs.telescope"
 require "plugin-configs.toggleterm"
-require "plugin-configs.symbols-outline"
 require "plugin-configs.bufferline"
 require "plugin-configs.lualine"
 require "plugin-configs.nvim-gps"
