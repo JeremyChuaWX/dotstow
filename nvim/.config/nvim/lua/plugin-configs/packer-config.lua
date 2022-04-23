@@ -57,7 +57,6 @@ return packer.startup(function(use)
     use { "akinsho/toggleterm.nvim", branch = "main" }
     use "nvim-lualine/lualine.nvim"
     use "simrat39/symbols-outline.nvim"
-    use "nvim-lua/lsp-status.nvim"
 
     -- git
     use "lewis6991/gitsigns.nvim"
