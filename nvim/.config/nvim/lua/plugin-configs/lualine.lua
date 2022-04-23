@@ -28,7 +28,6 @@ lualine.setup {
     sections = {
         lualine_a = { "mode" },
         lualine_b = { "diagnostics" },
-        -- lualine_c = { "%1n:", "filename" },
         lualine_c = {
             "%1n:", "filename",
             { gps.get_location, cond = gps.is_available },
