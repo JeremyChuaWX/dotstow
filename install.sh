@@ -45,6 +45,7 @@ if [[ $OSTYPE = "darwin"* ]] then
 
     # Faster key repeat
     defaults write NSGlobalDomain KeyRepeat -int 2
+    defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
     # Show filename extensions by default
     defaults write NSGlobalDomain AppleShowAllExtensions -bool true
