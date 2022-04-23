@@ -6,6 +6,7 @@ source "$ZDOTDIR/zsh-functions"
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
+zsh_add_file "zsh-keybinds"
 
 #---------#
 #-options-#
@@ -70,13 +71,13 @@ zsh_add_plugin "hlissner/zsh-autopair"
 #----------#
 
 # menu selection
-bindkey -M menuselect "${terminfo[kcbt]}" reverse-menu-complete # s-tab to go backwards in compselect
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-
-bindkey -s '^T' 'tmux attach -t $(tmux list-sessions -F \\#S | fzf)\n'
-bindkey -s '^D' 'tmux kill-session -t $(tmux list-sessions -F \\#S | fzf)\n'
-bindkey -s '^O' 'fuzzy_open\n'
-bindkey -s '^F' 'fuzzy_cd\n'
+# bindkey -M menuselect "${terminfo[kcbt]}" reverse-menu-complete # s-tab to go backwards in compselect
+# bindkey -M menuselect 'l' vi-forward-char
+# bindkey -M menuselect 'j' vi-down-line-or-history
+# bindkey -M menuselect 'h' vi-backward-char
+# bindkey -M menuselect 'k' vi-up-line-or-history
+# 
+# bindkey -s '^T' 'tmux attach -t $(tmux list-sessions -F \\#S | fzf)\n'
+# bindkey -s '^D' 'tmux kill-session -t $(tmux list-sessions -F \\#S | fzf)\n'
+# bindkey -s '^O' 'fuzzy_open\n'
+# bindkey -s '^F' 'fuzzy_cd\n'
