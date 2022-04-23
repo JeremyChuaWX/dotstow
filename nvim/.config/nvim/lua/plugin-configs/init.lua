@@ -4,7 +4,7 @@ require "plugin-configs.packer-config"
 require "plugin-configs.autopairs"
 require "plugin-configs.blankline"
 require "plugin-configs.treesitter"
-require "plugin-configs.surround"
+-- require "plugin-configs.surround"
 require "plugin-configs.colorizer"
 
 -- interface
