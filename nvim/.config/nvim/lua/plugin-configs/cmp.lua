@@ -13,7 +13,9 @@ if not lsp_kind_status_ok then
     return
 end
 
-require("luasnip.loaders.from_vscode").lazy_load()
+-- require("luasnip.loaders.from_vscode").lazy_load()
+-- require('luasnip').filetype_extend("javascript", { "javascriptreact" })
+-- require('luasnip').filetype_extend("javascript", { "html" })
 
 local check_back_space = function()
     local col = vim.fn.col(".") - 1

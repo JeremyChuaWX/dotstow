@@ -19,6 +19,7 @@ require "plugin-configs.dressing"
 require "plugin-configs.lsp"
 
 -- cmp
+require "plugin-configs.luasnip"
 require "plugin-configs.cmp"
 
 -- git
