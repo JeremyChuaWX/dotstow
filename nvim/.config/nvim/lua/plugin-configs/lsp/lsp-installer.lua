@@ -10,6 +10,7 @@ local servers = {
     "emmet_ls",
     "jsonls",
     "jdtls",
+    "tailwindcss",
 }
 
 for _, name in pairs(servers) do
