@@ -57,6 +57,7 @@ return packer.startup(function(use)
     use { "akinsho/toggleterm.nvim", branch = "main" }
     use "nvim-lualine/lualine.nvim"
     use "simrat39/symbols-outline.nvim"
+    use "stevearc/dressing.nvim"
 
     -- git
     use "lewis6991/gitsigns.nvim"
@@ -64,7 +65,6 @@ return packer.startup(function(use)
     -- telescope
     use "nvim-telescope/telescope.nvim"
     use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-    use "nvim-telescope/telescope-ui-select.nvim"
 
     -- treesitter
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }

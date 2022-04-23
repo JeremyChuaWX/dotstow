@@ -13,6 +13,7 @@ require "plugin-configs.toggleterm"
 require "plugin-configs.bufferline"
 require "plugin-configs.lualine"
 require "plugin-configs.nvim-gps"
+require "plugin-configs.dressing"
 
 -- lsp
 require "plugin-configs.lsp"
