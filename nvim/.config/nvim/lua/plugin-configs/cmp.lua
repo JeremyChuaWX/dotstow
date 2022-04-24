@@ -38,9 +38,10 @@ cmp.setup {
             i = cmp.mapping.abort(),
             c = cmp.mapping.close(),
         }),
-        -- Accept currently selected item.
-        -- Set `select` to `false` to only confirm explicitly selected items.
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<CR>"] = cmp.mapping.confirm({ 
+            select = true,
+            behaviour = cmp.ConfirmBehavior.Insert,
+        }),
         ["<Tab>"] = cmp.mapping(
             function(fallback)
                 if cmp.visible() then
@@ -72,8 +73,8 @@ cmp.setup {
         { name = "luasnip" },
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
-        { name = "path" },
         { name = "buffer" },
+        { name = "path" },
     },
     formatting = {
         format = lspkind.cmp_format {
@@ -87,10 +88,10 @@ cmp.setup {
             },
         },
     },
-    confirm_opts = {
-        behaviour = cmp.ConfirmBehavior.Replace,
-        select = false,
-    }
+    -- confirm_opts = {
+    --     behaviour = cmp.ConfirmBehavior.Replace,
+    --     select = false,
+    -- }
 }
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won"t work anymore).

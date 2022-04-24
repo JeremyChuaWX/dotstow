@@ -11,14 +11,19 @@ ts.setup {
         additional_vim_highlighting = true,
     },
     indent = {
-        enable = false,
+        enable = true,
         disable = {
             "yaml",
+            "javascriptreact",
+            "typescriptreact",
         },
     },
     autopairs = {
         enable = true,
     },
+    autotag = {
+        enable = true,
+    }
 }
 
 -- folding
