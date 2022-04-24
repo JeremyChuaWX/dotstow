@@ -11,7 +11,7 @@ ts.setup {
         additional_vim_highlighting = true,
     },
     indent = {
-        enable = true,
+        enable = false,
         disable = {
             "yaml",
         },
