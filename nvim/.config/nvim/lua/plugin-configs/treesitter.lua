@@ -14,8 +14,6 @@ ts.setup {
         enable = true,
         disable = {
             "yaml",
-            "javascriptreact",
-            "typescriptreact",
         },
     },
     autopairs = {

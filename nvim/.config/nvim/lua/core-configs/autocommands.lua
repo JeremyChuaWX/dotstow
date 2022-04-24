@@ -12,13 +12,26 @@ local format_settings = vim.api.nvim_create_autocmd(
         end,
     }
 )
+local js_family_settings = vim.api.nvim_create_autocmd(
+    { "BufNewFile", "BufRead" },
+    {
+        desc = "Set local indent settings for js family",
+        group = general_settings,
+        pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
+        callback = function()
+            vim.bo.shiftwidth = 2
+            vim.bo.tabstop = 2
+            vim.bo.softtabstop = 2
+        end,
+    }
+)
 
 -- highlight on yank
 local highlight_on_yank = vim.api.nvim_create_autocmd(
     "TextYankPost",
     {
         desc = "Highlight text after yanking",
-        callback = function ()
+        callback = function()
             vim.highlight.on_yank({
                 higroup = "Search",
                 timeout = 200
