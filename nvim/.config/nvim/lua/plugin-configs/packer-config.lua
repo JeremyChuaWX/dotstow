@@ -85,6 +85,9 @@ return packer.startup(function(use)
     -- json
     use "b0o/schemastore.nvim"
 
+    -- dap
+    use "mfussenegger/nvim-dap"
+
     -- snippets
     use "L3MON4D3/LuaSnip"
     use "rafamadriz/friendly-snippets"
