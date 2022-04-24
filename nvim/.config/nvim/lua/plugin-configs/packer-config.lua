@@ -76,6 +76,7 @@ return packer.startup(function(use)
     use "williamboman/nvim-lsp-installer"
     use "jose-elias-alvarez/null-ls.nvim"
     use "ray-x/lsp_signature.nvim"
+    use "RRethy/vim-illuminate"
 
     -- java
     use "mfussenegger/nvim-jdtls"

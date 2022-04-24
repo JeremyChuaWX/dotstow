@@ -51,7 +51,7 @@ local options = {
     splitright = true,
     signcolumn = "yes",
     completeopt = { "menu", "menuone", "noselect", },
-    colorcolumn = "100",
+    -- colorcolumn = "100",
 
     ------------
     -- editor --

@@ -41,7 +41,7 @@ M.setup = function()
     })
 end
 
-local function lsp_highlight_document(client)
+local function lsp_highlight_document_old(client)
     -- Set autocommands conditional on server_capabilities
     if client.resolved_capabilities.document_highlight then
         vim.api.nvim_exec(
@@ -55,6 +55,15 @@ local function lsp_highlight_document(client)
             false
         )
     end
+end
+
+local function lsp_highlight_document(client)
+    local status_ok, illuminate = pcall(require, "illuminate")
+    if not status_ok then
+        return
+    end
+
+    illuminate.on_attach(client)
 end
 
 local function lsp_keymaps(bufnr)
