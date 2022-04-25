@@ -8,5 +8,6 @@ npairs.setup {
     ts_config = {},
     diasble_filetype = {
         "TelescopePrompt",
+        "guihua",
     }
 }

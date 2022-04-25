@@ -3,7 +3,7 @@ if not status_ok then
     return
 end
 
-local ui = vim.api.nvim_list_uis()[1]
+-- local ui = vim.api.nvim_list_uis()[1]
 
 jabs.setup {
     position = "center",

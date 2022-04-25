@@ -17,5 +17,6 @@ blankline.setup {
     buftype_exclude = {
         "terminal",
         "nofile",
+        "guihua",
     },
 }
