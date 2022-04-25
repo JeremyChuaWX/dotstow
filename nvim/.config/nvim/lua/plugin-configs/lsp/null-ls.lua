@@ -10,11 +10,16 @@ local actions = null_ls.builtins.code_actions
 null_ls.setup {
     debug = false,
     sources = {
+        -- general
+        actions.gitsigns,
+
+        --python
         formatting.black.with({ extra_args = { "--fast" } }),
+
+        -- js family
         formatting.prettier.with {
             extra_args = { "--no-semi" },
             extra_filetypes = { "solidity" },
         },
-        actions.gitsigns,
     },
 }
