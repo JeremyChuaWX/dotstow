@@ -59,6 +59,7 @@ return packer.startup(function(use)
     use "nvim-lualine/lualine.nvim"
     use "simrat39/symbols-outline.nvim"
     use "stevearc/dressing.nvim"
+    use "matbme/JABS.nvim"
 
     -- git
     use "lewis6991/gitsigns.nvim"
@@ -78,6 +79,8 @@ return packer.startup(function(use)
     use "jose-elias-alvarez/null-ls.nvim"
     use "ray-x/lsp_signature.nvim"
     use "RRethy/vim-illuminate"
+    use{ "ray-x/guihua.lua", run = "cd lua/fzy && make" }
+    use "ray-x/navigator.lua"
 
     -- java
     use "mfussenegger/nvim-jdtls"
