@@ -48,5 +48,27 @@ lsp_installer.on_server_ready(function(server)
         return
     end
 
+    -- if server.name == "tsserver" then
+    --     local typescript_ok, typescript = pcall(require, "typescript")
+    --     if typescript_ok then
+    --         -- jose-elias-alvarez/typescript.nvim setup
+    --         typescript.setup {
+    --             disable_commands = false, -- prevent the plugin from creating Vim commands
+    --             disable_formatting = true, -- disable tsserver's formatting capabilities
+    --             debug = false, -- enable debug logging for commands
+    --             server = opts -- pass options to lspconfig's setup method
+    --         }
+
+    --         -- keybindings for new functionality from typescript.nvim
+    --         local key_opts = { noremap = true, silent = true }
+    --         vim.keymap.set("n", "<leader>ti", function() require("typescript").addMissingImports() end, key_opts)
+    --         vim.keymap.set("n", "<leader>to", function() require("typescript").organizeImports() end, key_opts)
+    --         vim.keymap.set("n", "<leader>tr", function() require("typescript").removeUnused() end, key_opts)
+    --         vim.keymap.set("n", "<leader>tf", function() require("typescript").fixAll() end, key_opts)
+    --     end
+
+    --     return
+    -- end
+
     server:setup(opts)
 end)
