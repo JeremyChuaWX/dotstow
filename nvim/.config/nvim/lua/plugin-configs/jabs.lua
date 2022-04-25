@@ -9,13 +9,13 @@ jabs.setup {
     position = "center",
     width = 50,
     height = 10,
-    border = "shadow",
+    border = "none",
 
     preview_position = "right",
     preview = {
         width = 50,
         height = 30,
-        border = "double",
+        border = "single",
     },
 
     -- col = ui.width,
