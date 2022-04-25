@@ -202,7 +202,7 @@ echo "===== Done =====\n"
 #---------------------------------------------------------------------------------------------------
 
 echo "\n===== Installing global npm packages ====="
-sudo npm -g i npm typescript neovim prettier
+sudo npm -g i npm typescript neovim prettier eslint
 echo "===== Done =====\n"
 
 #---------------------------------------------------------------------------------------------------
