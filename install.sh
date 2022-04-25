@@ -86,7 +86,6 @@ if [[ $OSTYPE = "darwin"* ]] then
 
     echo "\n===== Installing utilities ====="
     sudo -u $SUDO_USER brew install node python3 fzf git ripgrep fd tree tmux stow # utils
-    sudo -u $SUDO_USER brew install black # linters
     echo "===== Done =====\n"
 
 fi
@@ -170,7 +169,6 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         # utilities
         echo "\n===== Installing utilities ====="
         sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd-find gcc-c++ # utils
-        sudo dnf -y install black # linters
         echo "===== Done =====\n"
 
         # other apps
@@ -210,5 +208,5 @@ echo "===== Done =====\n"
 #---------------------------------------------------------------------------------------------------
 
 echo "\n===== Installing pip packages ====="
-sudo -u $SUDO_USER pip3 install neovim
+sudo -u $SUDO_USER pip3 install neovim black flake8
 echo "===== Done =====\n"
