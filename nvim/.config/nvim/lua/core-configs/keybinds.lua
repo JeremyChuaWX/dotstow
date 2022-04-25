@@ -52,3 +52,6 @@ set("n", "Z", "za", opts)
 -- stay in indent mode
 set("v", "<", "<gv", opts)
 set("v", ">", ">gv", opts)
+
+-- noh
+set("n", "<leader><space>", ":noh<CR>", opts)
