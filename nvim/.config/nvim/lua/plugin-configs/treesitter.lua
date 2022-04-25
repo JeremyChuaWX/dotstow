@@ -8,7 +8,7 @@ ts.setup {
     ignore_install = { "phpdoc" },
     highlight = {
         enable = true,
-        additional_vim_highlighting = true,
+        additional_vim_highlighting = false,
     },
     indent = {
         enable = true,
