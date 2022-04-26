@@ -83,7 +83,7 @@ end
 
 local function formatting_callback(client, bufnr)
     vim.keymap.set(
-        "n", "<leader>f",
+        "n", "gf",
         function()
             local params = vim.lsp.util.make_formatting_params({})
             client.request("textDocument/formatting", params, nil, bufnr)
