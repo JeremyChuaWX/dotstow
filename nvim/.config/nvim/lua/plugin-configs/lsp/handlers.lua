@@ -88,11 +88,7 @@ local function formatting_callback(client, bufnr)
             local params = vim.lsp.util.make_formatting_params({})
             client.request("textDocument/formatting", params, nil, bufnr)
         end,
-        {
-            buffer = bufnr,
-            noremap = true,
-            silent = true,
-        }
+        { buffer = bufnr }
     )
 end
 
