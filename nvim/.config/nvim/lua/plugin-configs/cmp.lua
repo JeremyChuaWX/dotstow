@@ -13,10 +13,6 @@ if not lsp_kind_status_ok then
     return
 end
 
--- require("luasnip.loaders.from_vscode").lazy_load()
--- require('luasnip').filetype_extend("javascript", { "javascriptreact" })
--- require('luasnip').filetype_extend("javascript", { "html" })
-
 local check_back_space = function()
     local col = vim.fn.col(".") - 1
     if col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
@@ -38,9 +34,9 @@ cmp.setup {
             i = cmp.mapping.abort(),
             c = cmp.mapping.close(),
         }),
-        ["<CR>"] = cmp.mapping.confirm({ 
+        ["<CR>"] = cmp.mapping.confirm({
             select = true,
-            behaviour = cmp.ConfirmBehavior.Insert,
+            behaviour = cmp.ConfirmBehavior.Replace,
         }),
         ["<Tab>"] = cmp.mapping(
             function(fallback)
@@ -88,13 +84,8 @@ cmp.setup {
             },
         },
     },
-    -- confirm_opts = {
-    --     behaviour = cmp.ConfirmBehavior.Replace,
-    --     select = false,
-    -- }
 }
 
--- Use buffer source for `/` (if you enabled `native_menu`, this won"t work anymore).
 cmp.setup.cmdline("/", {
     mapping = cmp.mapping.preset.cmdline {
         ["<Tab>"] = {
@@ -117,7 +108,6 @@ cmp.setup.cmdline("/", {
     }
 })
 
--- Use cmdline & path source for ":" (if you enabled `native_menu`, this won"t work anymore).
 cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline {
         ["<Tab>"] = {
