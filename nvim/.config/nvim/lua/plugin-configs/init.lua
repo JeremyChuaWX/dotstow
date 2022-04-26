@@ -1,3 +1,4 @@
+require "plugin-configs.impatient"
 require "plugin-configs.packer-config"
 
 -- editor

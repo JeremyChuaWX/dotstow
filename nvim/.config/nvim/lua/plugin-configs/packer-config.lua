@@ -45,6 +45,7 @@ return packer.startup(function(use)
     use "kyazdani42/nvim-web-devicons"
     use "onsails/lspkind.nvim"
     use "antoinemadec/FixCursorHold.nvim"
+    use "lewis6991/impatient.nvim"
 
     -- editor
     use "lukas-reineke/indent-blankline.nvim"
