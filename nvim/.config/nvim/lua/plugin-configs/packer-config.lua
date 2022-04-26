@@ -84,9 +84,6 @@ return packer.startup(function(use)
     -- java
     use "mfussenegger/nvim-jdtls"
 
-    -- typescript
-    use "jose-elias-alvarez/typescript.nvim"
-
     -- json
     use "b0o/schemastore.nvim"
 
