@@ -81,6 +81,17 @@ local function lsp_keymaps(bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gf", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
 end
 
+local function formatting_callback(client, bufnr)
+    vim.keymap.set(
+        "n", "<leader>f",
+        function()
+            local params = vim.lsp.util.make_formatting_params({})
+            client.request("textDocument/formatting", params, nil, bufnr)
+        end,
+        { buffer = bufnr }
+    )
+end
+
 M.on_attach = function(client, bufnr)
     if client.name == "tsserver" then
         client.resolved_capabilities.document_formatting = false

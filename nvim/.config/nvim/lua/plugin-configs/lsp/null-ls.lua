@@ -9,6 +9,10 @@ local actions = null_ls.builtins.code_actions
 
 null_ls.setup {
     debug = false,
+    diagnostics_format = "#{m} (#{s})",
+    update_in_insert = true,
+    on_attach = require("plugin-configs.lsp.handlers").on_attach,
+
     sources = {
         -- general
         actions.gitsigns,
