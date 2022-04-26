@@ -17,6 +17,9 @@ null_ls.setup {
         -- general
         actions.gitsigns,
 
+        -- lua
+        formatting.stylua,
+
         --python
         formatting.black.with({ extra_args = { "--fast" } }),
         diagnostics.flake8,
