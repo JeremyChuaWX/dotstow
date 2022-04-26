@@ -85,7 +85,11 @@ if [[ $OSTYPE = "darwin"* ]] then
     echo "===== Done =====\n"
 
     echo "\n===== Installing utilities ====="
-    sudo -u $SUDO_USER brew install node python3 fzf git ripgrep fd tree tmux stow
+    sudo -u $SUDO_USER brew install fzf git ripgrep fd tree tmux stow
+    echo "===== Done =====\n"
+
+    echo "\n===== Installing languages ====="
+    sudo -u $SUDO_USER brew install node python3 go
     echo "===== Done =====\n"
 
 fi
@@ -153,7 +157,7 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         
         # other package managers
         echo "\n===== Installing other package managers ====="
-        sudo dnf -y install python3-pip nodejs
+        sudo dnf -y install python3-pip
         echo "===== Done =====\n"
 
         # text editors
@@ -168,7 +172,12 @@ if [[ $OSTYPE = "linux-gnu" ]] then
 
         # utilities
         echo "\n===== Installing utilities ====="
-        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd-find gcc-c++ # utils
+        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd-find gcc-c++
+        echo "===== Done =====\n"
+
+        # languages
+        echo "\n===== Installing languages ====="
+        sudo dnf -y install nodejs go
         echo "===== Done =====\n"
 
         # other apps
