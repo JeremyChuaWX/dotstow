@@ -46,6 +46,7 @@ return packer.startup(function(use)
     use "onsails/lspkind.nvim"
     use "antoinemadec/FixCursorHold.nvim"
     use "lewis6991/impatient.nvim"
+    use{ "ray-x/guihua.lua", run = "cd lua/fzy && make" }
 
     -- editor
     use "lukas-reineke/indent-blankline.nvim"
@@ -81,7 +82,6 @@ return packer.startup(function(use)
     use "jose-elias-alvarez/null-ls.nvim"
     use "ray-x/lsp_signature.nvim"
     use "RRethy/vim-illuminate"
-    use{ "ray-x/guihua.lua", run = "cd lua/fzy && make" }
     use "ray-x/navigator.lua"
 
     -- java
