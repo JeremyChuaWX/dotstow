@@ -11,7 +11,7 @@ ts.setup {
         additional_vim_highlighting = false,
     },
     indent = {
-        enable = true,
+        enable = false,
         disable = {
             "yaml",
         },
@@ -20,6 +20,9 @@ ts.setup {
         enable = true,
     },
     autotag = {
+        enable = true,
+    },
+    yati = {
         enable = true,
     }
 }

@@ -72,6 +72,7 @@ return packer.startup(function(use)
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     use "SmiteshP/nvim-gps"
     use "windwp/nvim-ts-autotag"
+    use "yioneko/nvim-yati"
 
     -- lsp
     use "neovim/nvim-lspconfig"
