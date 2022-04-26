@@ -14,7 +14,6 @@ require "plugin-configs.bufferline"
 require "plugin-configs.lualine"
 require "plugin-configs.nvim-gps"
 require "plugin-configs.dressing"
-require "plugin-configs.jabs"
 
 -- lsp
 require "plugin-configs.lsp"

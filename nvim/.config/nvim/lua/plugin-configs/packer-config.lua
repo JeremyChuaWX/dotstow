@@ -59,7 +59,6 @@ return packer.startup(function(use)
     use "nvim-lualine/lualine.nvim"
     use "simrat39/symbols-outline.nvim"
     use "stevearc/dressing.nvim"
-    use "matbme/JABS.nvim"
 
     -- git
     use "lewis6991/gitsigns.nvim"
