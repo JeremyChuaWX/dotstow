@@ -132,20 +132,17 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         #- Install packages -#
         #--------------------#
         
-        # rpm fusion
         echo "\n===== Installing rpm fusion repos ====="
         sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
         sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         echo "===== Done =====\n"
 
-        # media codecs
         echo "\n===== Installing media codecs ====="
         sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
         sudo dnf -y install lame\* --exclude=lame-devel
         sudo dnf -y group upgrade --with-optional Multimedia
         echo "===== Done =====\n"
 
-        # nvidia drivers
         echo "\n===== Installing nvidia drivers ====="
         if [[ $(sudo lspci | grep "VGA") = "" ]] then
             echo "no nvidia card"
@@ -155,27 +152,22 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         fi
         echo "===== Done =====\n"
         
-        # other package managers
         echo "\n===== Installing other package managers ====="
         sudo dnf -y install python3-pip
         echo "===== Done =====\n"
 
-        # text editors
         echo "\n===== Installing text editors ====="
         sudo dnf -y install vim neovim python3-neovim
         echo "===== Done =====\n"
 
-        # utilities
         echo "\n===== Installing utilities ====="
         sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd-find gcc-c++
         echo "===== Done =====\n"
 
-        # languages
         echo "\n===== Installing languages ====="
         sudo dnf -y install nodejs go
         echo "===== Done =====\n"
 
-        # other apps
         echo "\n===== Installing other apps ====="
         # discord
         sudo dnf -y install discord
