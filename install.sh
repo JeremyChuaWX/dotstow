@@ -165,11 +165,6 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         sudo dnf -y install vim neovim python3-neovim
         echo "===== Done =====\n"
 
-        # window manager
-        echo "\n===== Installing window managers ====="
-        sudo dnf -y install awesome nitrogen
-        echo "===== Done =====\n"
-
         # utilities
         echo "\n===== Installing utilities ====="
         sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd-find gcc-c++
