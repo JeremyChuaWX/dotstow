@@ -35,6 +35,6 @@ function fuzzy_cd() {
 }
 
 function fuzzy_open() {
-    STR=$(fd -H | fzf)
+    STR=$(fd -H --type file | fzf)
     [[ -f $STR ]] && nvim $STR
 }
