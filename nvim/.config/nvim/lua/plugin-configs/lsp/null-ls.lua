@@ -29,7 +29,13 @@ null_ls.setup {
             extra_args = { "--no-semi" },
             extra_filetypes = { "solidity" },
         },
-        diagnostics.eslint_d,
-        actions.eslint_d,
+        diagnostics.eslint_d.with {
+            extra_args = { "--no-eslintrc" },
+            extra_filetypes = { "solidity" },
+        },
+        actions.eslint_d.with {
+            extra_args = { "--no-eslintrc" },
+            extra_filetypes = { "solidity" },
+        },
     },
 }
