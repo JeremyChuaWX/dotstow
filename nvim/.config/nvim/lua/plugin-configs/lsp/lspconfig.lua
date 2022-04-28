@@ -8,25 +8,17 @@ if not lspconfig_ok then
 	return
 end
 
-lsp_installer.setup()
-
-local auto_install_server_list = {
-	"sumneko_lua",
-	"pyright",
-	"tsserver",
-	"emmet_ls",
-	"jsonls",
-	"jdtls",
-	"tailwindcss",
-}
-
-for _, name in pairs(auto_install_server_list) do
-	local server_is_found, server = lsp_installer.get_server(name)
-	if server_is_found and not server:is_installed() then
-		vim.notify("Installing " .. name)
-		server:install()
-	end
-end
+lsp_installer.setup({
+	ensure_installed = {
+		"sumneko_lua",
+		"pyright",
+		"tsserver",
+		"emmet_ls",
+		"jsonls",
+		"jdtls",
+		"tailwindcss",
+	},
+})
 
 -- register a handler that will be called for all installed servers
 -- you may also register handlers on specific server instances instead
