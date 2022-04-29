@@ -28,9 +28,11 @@ harpoon.setup({
 })
 
 -- keymaps
-local opts = { noremap = true, silent = true }
 local set = function(mode, lhs, rhs)
-	vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
+	vim.api.nvim_set_keymap(
+        mode, lhs, rhs,
+        { noremap = true, silent = true }
+    )
 end
 
 if vim.fn.exists(":Telescope") then
