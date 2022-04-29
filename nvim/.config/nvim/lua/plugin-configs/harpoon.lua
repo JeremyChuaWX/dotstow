@@ -36,9 +36,9 @@ local set = function(mode, lhs, rhs)
 end
 
 if vim.fn.exists(":Telescope") then
-	set("n", "<leader>H", ":Telescope harpoon marks<CR>")
+	set("n", "<leader>HH", ":Telescope harpoon marks<CR>")
 else
-	set("n", "<leader>H", ":lua require'harpoon.ui'.toggle_quick_menu()<CR>")
+	set("n", "<leader>HH", ":lua require'harpoon.ui'.toggle_quick_menu()<CR>")
 end
 
 set("n", "<leader>HA", ":lua require'harpoon.mark'.add_file()<CR>")
