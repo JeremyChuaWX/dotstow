@@ -36,11 +36,11 @@ local set = function(mode, lhs, rhs)
 end
 
 if vim.fn.exists(":Telescope") then
-	set("n", "<leader>HH", ":Telescope harpoon marks<CR>")
+	set("n", "<leader>hh", ":Telescope harpoon marks<CR>")
 else
-	set("n", "<leader>HH", ":lua require'harpoon.ui'.toggle_quick_menu()<CR>")
+	set("n", "<leader>hh", ":lua require'harpoon.ui'.toggle_quick_menu()<CR>")
 end
 
-set("n", "<leader>HA", ":lua require'harpoon.mark'.add_file()<CR>")
+set("n", "<leader>ha", ":lua require'harpoon.mark'.add_file()<CR>")
 
 -- TODO: add mapping to a function, open_entry(i)
