@@ -17,7 +17,7 @@ local js_family_settings = vim.api.nvim_create_autocmd(
     {
         desc = "Set local indent settings for js family",
         group = general_settings,
-        pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
+        pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.json" },
         callback = function()
             vim.bo.shiftwidth = 2
             vim.bo.tabstop = 2
