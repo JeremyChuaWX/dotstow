@@ -22,9 +22,9 @@ harpoon.setup({
 	-- set marks specific to each git branch inside git repository
 	mark_branch = false,
 
-	menu = {
-		width = vim.api.nvim_win_get_width(0),
-	},
+	-- menu = {
+	-- 	width = vim.api.nvim_win_get_width(0),
+	-- },
 })
 
 -- keymaps
@@ -34,32 +34,11 @@ local set = function(mode, lhs, rhs)
 end
 
 if vim.fn.exists(":Telescope") then
-	set("n", "hh", ":Telescope harpoon marks<CR>")
+	set("n", "HH", ":Telescope harpoon marks<CR>")
 else
-	set("n", "hh", ":lua require'harpoon.ui'.toggle_quick_menu()<CR>")
+	set("n", "HH", ":lua require'harpoon.ui'.toggle_quick_menu()<CR>")
 end
 
-set("n", "ha", ":lua require'harpoon.mark'.add_file()<CR>")
-
-local harpoon_mappings = vim.api.nvim_create_augroup("harpoon_mappings", { clear = true })
-local harpoon_next_entry = vim.api.nvim_create_autocmd("BufEnter", {
-	group = "harpoon_mappings",
-	pattern = "harpoon",
-	desc = "Use j and k in harpoon menu",
-	callback = function()
-		set("n", "j", ":lua require('harpoon.ui').nav_next()<CR>")
-		set("n", "k", ":lua require('harpoon.ui').nav_prev()<CR>")
-	end,
-})
-
-local harpoon_clear_mappings = vim.api.nvim_create_autocmd("BufDelete", {
-	group = "harpoon_mappings",
-	pattern = "harpoon",
-	desc = "Clear mapping after closing harpoon menu",
-	callback = function()
-		vim.api.nvim_del_keymap("n", "j")
-		vim.api.nvim_del_keymap("n", "k")
-	end,
-})
+set("n", "HA", ":lua require'harpoon.mark'.add_file()<CR>")
 
 -- TODO: add mapping to a function, open_entry(i)
