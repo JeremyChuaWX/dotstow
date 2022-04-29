@@ -18,6 +18,7 @@ lsp_installer.setup({
 		"jdtls",
 		"tailwindcss",
 	},
+    automatic_installation = true,
 })
 
 -- register a handler that will be called for all installed servers
@@ -43,6 +44,11 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 	if server.name == "emmet_ls" then
 		local emmet_ls_opts = require("plugin-configs.lsp.settings.emmet_ls")
 		opts = vim.tbl_deep_extend("force", emmet_ls_opts, opts)
+	end
+
+	if server.name == "tailwindcss" then
+		local tailwindcss_opts = require("plugin-configs.lsp.settings.tailwindcss")
+		opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
 	end
 
 	lspconfig[server.name].setup(opts)
