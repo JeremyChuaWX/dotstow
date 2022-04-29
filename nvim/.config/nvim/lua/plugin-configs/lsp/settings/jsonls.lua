@@ -7,10 +7,10 @@ return {
     settings = {
         json = {
             schemas = schemastore.json.schemas {
-                select = {
-                    "package.json",
-                    "tsconfig.json",
-                },
+                -- select = {
+                --     "package.json",
+                --     "tsconfig.json",
+                -- },
             },
         },
     },
