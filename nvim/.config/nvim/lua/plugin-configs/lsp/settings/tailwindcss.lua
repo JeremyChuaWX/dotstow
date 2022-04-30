@@ -1,5 +1,5 @@
 return {
-    filetype = { 
+    filetypes = {
         "aspnetcorerazor",
         "astro",
         "astro-markdown",
