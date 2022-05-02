@@ -37,5 +37,9 @@ null_ls.setup {
             -- extra_args = { "--no-eslintrc" },
             extra_filetypes = { "solidity" },
         },
+
+        -- markdown
+        diagnostics.proselint,
+        actions.proselint,
     },
 }
