@@ -21,21 +21,21 @@ null_ls.setup {
         formatting.stylua,
 
         --python
-        formatting.black.with({ extra_args = { "--fast" } }),
+        formatting.black.with {
+            extra_args = { "--fast" },
+        },
         diagnostics.flake8,
 
         -- js family
         formatting.prettier.with {
             extra_args = { "--no-semi" },
-            extra_filetypes = { "solidity" },
         },
-        diagnostics.eslint_d.with {
-            -- extra_args = { "--no-eslintrc" },
-            extra_filetypes = { "solidity" },
-        },
-        actions.eslint_d.with {
-            -- extra_args = { "--no-eslintrc" },
-            extra_filetypes = { "solidity" },
+        diagnostics.eslint_d,
+        actions.eslint_d,
+
+        -- solidity
+        diagnostics.solhint.with {
+            extra_args = { "--config", vim.fn.expand("~/.solhint.json") },
         },
     },
 }
