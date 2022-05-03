@@ -5,7 +5,7 @@ if [[ $OSTYPE = "darwin"* ]] then
 fi
 
 # directories
-alias ll="ls -AlF --color=auto"
+alias ll="ls -AlF --color=auto --group-directories-first"
 alias ..="cd .."
 
 # files
