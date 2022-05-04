@@ -102,5 +102,3 @@ local options = {
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
-
--- let g:loaded_clipboard_provider="clipboard-x11"
