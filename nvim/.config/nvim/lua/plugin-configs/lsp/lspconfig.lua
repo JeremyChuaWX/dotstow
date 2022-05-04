@@ -21,12 +21,12 @@ lsp_installer.setup({
     automatic_installation = true,
 })
 
-local blacklist = {
+local blacklist_servers = {
     "jdtls",
 }
 
-local function in_blacklist(name, blacklist)
-    for _, check in pairs(blacklist) do
+local function in_list(name, list)
+    for _, check in pairs(list) do
         if name == check then
             return true
         end
@@ -64,7 +64,7 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 		opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
 	end
 
-    if not in_blacklist(server.name, blacklist) then
+    if not in_list(server.name, blacklist_servers) then
         lspconfig[server.name].setup(opts)
     end
 end

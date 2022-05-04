@@ -108,12 +108,6 @@ M.on_attach = function(client, bufnr)
         formatting_callback(client, bufnr)
     end
 
-    if client.name == "jdtls" then
-        require("jdtls").setup_dap { hotcodereplace = "auto" }
-        require("jdtls.dap").setup_dap_class_configs()
-        vim.lsp.codelens.refresh()
-    end
-
     lsp_keymaps(bufnr)
     lsp_highlight_document(client)
 end

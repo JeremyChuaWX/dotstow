@@ -65,8 +65,8 @@ end
 local set = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-set("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
-set("n", "<leader>dc", ":lua require'dap'.continue()<CR>", opts)
-set("n", "<leader>dj", ":lua require'dap'.step_over()<CR>", opts)
-set("n", "<leader>dk", ":lua require'dap'.step_into()<CR>", opts)
-set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", opts)
+set("n", "<c-d>b", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
+set("n", "<c-d>c", ":lua require'dap'.continue()<CR>", opts)
+set("n", "<c-d>j", ":lua require'dap'.step_over()<CR>", opts)
+set("n", "<c-d>k", ":lua require'dap'.step_into()<CR>", opts)
+set("n", "<c-d>r", ":lua require'dap'.repl.open()<CR>", opts)
