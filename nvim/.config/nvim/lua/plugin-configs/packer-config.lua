@@ -91,6 +91,7 @@ return packer.startup(function(use)
 
     -- dap
     use "mfussenegger/nvim-dap"
+    use "rcarriga/nvim-dap-ui"
 
     -- snippets
     use "L3MON4D3/LuaSnip"
