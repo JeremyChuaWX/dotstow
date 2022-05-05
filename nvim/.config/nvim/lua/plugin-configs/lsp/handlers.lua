@@ -92,12 +92,6 @@ M.on_attach = function(client, bufnr)
         formatting_callback(client, bufnr)
     end
 
-    if client.name == "jdtls" then
-        print("this is jdtls")
-        require("jdtls").setup_dap({ hotcodereplace = "auto" })
-        require('jdtls.dap').setup_dap_main_class_configs()
-    end
-
     lsp_keymaps(bufnr)
     lsp_highlight_document(client)
 end
