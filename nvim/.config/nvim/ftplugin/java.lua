@@ -164,9 +164,9 @@ local config = {
     -- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
     --
     -- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
-    -- init_options = {
-    --     bundles = bundles,
-    -- },
+    init_options = {
+        bundles = bundles,
+    },
 }
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.
