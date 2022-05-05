@@ -7,3 +7,6 @@
 [submodule "vim/.vim/pack/default/start/vim-surround"]
 	path = vim/.vim/pack/default/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "nvim/.config/nvim/java-debug"]
+	path = nvim/.config/nvim/java-debug
+	url = https://github.com/microsoft/java-debug.git
