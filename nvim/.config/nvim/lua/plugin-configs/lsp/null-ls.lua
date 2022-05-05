@@ -26,6 +26,9 @@ null_ls.setup {
         },
         diagnostics.flake8,
 
+        -- java
+        formatting.google_java_format,
+
         -- js family
         formatting.prettier.with {
             extra_args = { "--no-semi" },
