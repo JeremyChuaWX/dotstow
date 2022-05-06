@@ -35,10 +35,5 @@ null_ls.setup {
         },
         diagnostics.eslint_d,
         actions.eslint_d,
-
-        -- solidity
-        diagnostics.solhint.with {
-            extra_args = { "--config", vim.fn.expand("~/.solhint.json") },
-        },
     },
 }
