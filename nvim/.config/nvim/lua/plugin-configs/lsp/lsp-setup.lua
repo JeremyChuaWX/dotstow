@@ -63,6 +63,11 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 		opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
 	end
 
+	if server.name == "solidity_ls" then
+		local solidity_ls_opts = require("plugin-configs.lsp.settings.solidity_ls")
+		opts = vim.tbl_deep_extend("force", solidity_ls_opts, opts)
+	end
+
     if not in_list(server.name, blacklist_servers) then
         lspconfig[server.name].setup(opts)
     end
