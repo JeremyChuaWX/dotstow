@@ -3,7 +3,8 @@ return {
 		solidity = {
 			packageDefaultDependenciesContractDirectory = "",
 			packageDefaultDependenciesDirectory = "node_modules",
-            linter = "solhint",
+			enabledAsYouTypeCompilationErrorCheck = true,
+			linter = "solhint",
 		},
 	},
 }
