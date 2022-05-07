@@ -63,11 +63,6 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 		opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
 	end
 
-	if server.name == "solang" then
-		local solang_opts = require("plugin-configs.lsp.settings.solang")
-		opts = vim.tbl_deep_extend("force", solang_opts, opts)
-	end
-
     if not in_list(server.name, blacklist_servers) then
         lspconfig[server.name].setup(opts)
     end
