@@ -18,7 +18,6 @@ lsp_installer.setup({
 		"jdtls",
 		"tailwindcss",
 	},
-    automatic_installation = true,
 })
 
 local blacklist_servers = {
@@ -62,6 +61,11 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 	if server.name == "tailwindcss" then
 		local tailwindcss_opts = require("plugin-configs.lsp.settings.tailwindcss")
 		opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
+	end
+
+	if server.name == "solang" then
+		local solang_opts = require("plugin-configs.lsp.settings.solang")
+		opts = vim.tbl_deep_extend("force", solang_opts, opts)
 	end
 
     if not in_list(server.name, blacklist_servers) then
