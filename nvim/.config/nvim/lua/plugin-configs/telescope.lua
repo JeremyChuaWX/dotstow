@@ -5,15 +5,37 @@ end
 
 telescope.setup {
     defaults = {
-        path_display = { "smart" },
+        layout_config = {
+            horizontal = {
+                preview_width = 0.55,
+                results_width = 0.8,
+            },
+            vertical = {
+                mirror = false,
+            },
+            width = 0.80,
+            height = 0.85,
+        },
+        path_display = { "absolute" },
         mappings = {
             i = {
-                ["<esc>"] = "close",
-                ["<C-j>"] = "move_selection_next",
-                ["<C-k>"] = "move_selection_previous",
+                ["<C-e>"] = "close",
+                ["<Tab>"] = "move_selection_next",
+                ["<S-Tab>"] = "move_selection_previous",
+            },
+            n = {
+                ["<C-e>"] = "close",
+                ["<Tab>"] = "move_selection_next",
+                ["<S-Tab>"] = "move_selection_previous",
             },
         },
     },
+    file_ignore_patterns = {
+        "node_modules",
+        ".git/",
+    },
+    file_sorter = require("telescope.sorters").get_fuzzy_file,
+    generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
     extensions = {
         fzf = {
             fuzzy = true, -- false will only do exact matching
