@@ -25,7 +25,6 @@ telescope.setup {
 }
 
 telescope.load_extension("fzf")
-telescope.load_extension("harpoon")
 
 -- keymaps
 local set = vim.api.nvim_set_keymap

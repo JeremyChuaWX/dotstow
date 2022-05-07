@@ -83,6 +83,7 @@ return packer.startup(function(use)
     use "ray-x/lsp_signature.nvim"
     use "RRethy/vim-illuminate"
     use "j-hui/fidget.nvim"
+    use "folke/trouble.nvim"
 
     -- java
     use "mfussenegger/nvim-jdtls"

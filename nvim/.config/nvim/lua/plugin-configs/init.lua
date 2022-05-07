@@ -16,7 +16,6 @@ require "plugin-configs.lualine"
 -- require "plugin-configs.nvim-gps"
 require "plugin-configs.dressing"
 require "plugin-configs.nvimtree"
-require "plugin-configs.harpoon"
 
 -- lsp
 require "plugin-configs.lsp"
