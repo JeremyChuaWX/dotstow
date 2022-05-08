@@ -3,7 +3,7 @@ require "plugin-configs.packer-config"
 
 -- editor
 require "plugin-configs.autopairs"
-require "plugin-configs.blankline"
+require "plugin-configs.indent"
 require "plugin-configs.treesitter"
 -- require "plugin-configs.surround"
 require "plugin-configs.colorizer"
