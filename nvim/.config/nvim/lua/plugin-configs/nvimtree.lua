@@ -61,6 +61,7 @@ require("nvim-tree").setup({
 		},
 		icons = {
 			webdev_colors = true,
+            git_placement = "after",
 		},
 	},
 	hijack_directories = {
