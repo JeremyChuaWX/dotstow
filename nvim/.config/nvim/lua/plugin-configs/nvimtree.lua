@@ -1,7 +1,5 @@
 vim.g.nvim_tree_add_trailing = 1
 vim.g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
 	git = {
 		unstaged = "[]",
 		staged = "[ﰶ]",
@@ -10,16 +8,6 @@ vim.g.nvim_tree_icons = {
 		untracked = "[]",
 		deleted = "[﯀]",
 		ignored = "[]",
-	},
-	folder = {
-		arrow_open = "",
-		arrow_closed = "",
-		default = "",
-		open = "",
-		empty = "",
-		empty_open = "",
-		symlink = "",
-		symlink_open = "",
 	},
 }
 
@@ -61,7 +49,7 @@ require("nvim-tree").setup({
 		},
 		icons = {
 			webdev_colors = true,
-            git_placement = "after",
+			git_placement = "after",
 		},
 	},
 	hijack_directories = {
