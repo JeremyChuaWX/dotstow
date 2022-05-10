@@ -70,7 +70,6 @@ local function lsp_keymaps(bufnr)
 	end
 
 	set("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
-	set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 	set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 	set("n", "gR", "<cmd>lua vim.lsp.buf.rename()<CR>")
 	set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>")
