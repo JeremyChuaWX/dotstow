@@ -61,7 +61,7 @@ return packer.startup(function(use)
     use "simrat39/symbols-outline.nvim"
     use "stevearc/dressing.nvim"
     use "kyazdani42/nvim-tree.lua"
-    use "ThePrimeagen/harpoon"
+    use "folke/zen-mode.nvim"
 
     -- git
     use "lewis6991/gitsigns.nvim"
