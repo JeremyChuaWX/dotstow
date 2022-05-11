@@ -25,4 +25,5 @@ _darcs
 # Custom
 ^/Fura.*
 ^/Jet.*
+^/Kollektif.*
 \.DS_Store
