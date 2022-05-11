@@ -44,8 +44,8 @@ if [[ $OSTYPE = "darwin"* ]] then
     echo "\n===== Setting system configurations ====="
 
     # Faster key repeat
-    defaults write NSGlobalDomain KeyRepeat -int 2
-    defaults write NSGlobalDomain InitialKeyRepeat -int 15
+    defaults write NSGlobalDomain KeyRepeat -int 1.5
+    defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
     # Show filename extensions by default
     defaults write NSGlobalDomain AppleShowAllExtensions -bool true
