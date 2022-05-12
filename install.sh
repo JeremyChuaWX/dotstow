@@ -113,7 +113,7 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         # writing sane options to dnf
         echo "\n===== Writing sane options to dnf.conf ====="
         if [[ $(grep "defaultyes" /etc/dnf/dnf.conf) = "" ]] then
-            echo "defaultyes=True\nfastestmirror=True\nmax_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
+            echo "defaultyes=True\nmax_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
             echo "dnf options have been set..."
         else
             echo "dnf options already set..."
