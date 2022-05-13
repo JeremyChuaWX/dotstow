@@ -33,3 +33,10 @@ if [[ "$OSTYPE" == "darwin"* ]] then
 elif [[ "$OSTYPE" == "linux-gnu" ]] then
     export GCM_CREDENTIAL_STORE=gpg
 fi
+
+#----------------------#
+#-node version manager-#
+#----------------------#
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
