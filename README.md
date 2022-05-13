@@ -14,10 +14,6 @@ sudo /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JeremyChuaWX/do
 ## Editor
 - [neovim](https://github.com/neovim/neovim)
 
-## Fonts
-- [FuraCode](fonts/FuraCode)
-- [JetBrains](fonts/JetBrainsMono)
-
 ## Utilities
 - [GCM](docs/gcm-setup.md)
 - [stow](docs/stow-setup.md)
@@ -26,8 +22,7 @@ sudo /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JeremyChuaWX/do
 ## Others
 - [Fedora](docs/fedora-setup.md)
 - [git submodules](docs/gitsubmodules-setup.md)
+- [Adding tmux-256color terminfo](docs/tmux-256color.md)
 
 # TODO
-- [ ] separate zsh keybindings into another file
-- [ ] check if brew exists before installing
 - [ ] set up nvim-dap
