@@ -17,6 +17,9 @@ null_ls.setup {
         -- general
         actions.gitsigns,
 
+        -- zsh
+        diagnostics.zsh,
+
         -- lua
         formatting.stylua,
 
