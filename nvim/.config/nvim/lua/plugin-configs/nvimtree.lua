@@ -1,15 +1,15 @@
 vim.g.nvim_tree_add_trailing = 1
-vim.g.nvim_tree_icons = {
-	git = {
-		unstaged = "[]",
-		staged = "[ﰶ]",
-		unmerged = "[]",
-		renamed = "[➜]",
-		untracked = "[]",
-		deleted = "[﯀]",
-		ignored = "[]",
-	},
-}
+-- vim.g.nvim_tree_icons = {
+-- 	git = {
+-- 		unstaged = "[]",
+-- 		staged = "[ﰶ]",
+-- 		unmerged = "[]",
+-- 		renamed = "[➜]",
+-- 		untracked = "[]",
+-- 		deleted = "[﯀]",
+-- 		ignored = "[]",
+-- 	},
+-- }
 
 require("nvim-tree").setup({
 	auto_reload_on_write = true,
@@ -49,7 +49,7 @@ require("nvim-tree").setup({
 		},
 		icons = {
 			webdev_colors = true,
-			git_placement = "after",
+			git_placement = "signcolumn",
 		},
 	},
 	hijack_directories = {
