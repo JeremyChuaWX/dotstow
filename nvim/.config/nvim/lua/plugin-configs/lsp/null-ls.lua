@@ -36,7 +36,7 @@ null_ls.setup {
         formatting.prettier.with {
             extra_args = { "--no-semi" },
         },
-        diagnostics.eslint_d,
-        actions.eslint_d,
+        diagnostics.eslint,
+        actions.eslint,
     },
 }
