@@ -38,3 +38,7 @@ function fuzzy_open() {
     STR=$(fd -H --type file | fzf)
     [[ -f $STR ]] && nvim $STR
 }
+
+function mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
