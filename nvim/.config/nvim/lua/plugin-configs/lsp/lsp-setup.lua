@@ -68,6 +68,11 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 		opts = vim.tbl_deep_extend("force", solidity_ls_opts, opts)
 	end
 
+	if server.name == "solc" then
+		local solc_opts = require("plugin-configs.lsp.settings.solc")
+		opts = vim.tbl_deep_extend("force", solc_opts, opts)
+	end
+
     if not in_list(server.name, blacklist_servers) then
         lspconfig[server.name].setup(opts)
     end
