@@ -14,24 +14,26 @@ lsp_installer.setup({
 		"pyright",
 		"tsserver",
 		"emmet_ls",
+		"eslint",
 		"jsonls",
 		"jdtls",
 		"tailwindcss",
+		"solidity_ls",
 	},
 })
 
 local blacklist_servers = {
-    "jdtls",
+	"jdtls",
 }
 
 local function in_list(name, list)
-    for _, check in pairs(list) do
-        if name == check then
-            return true
-        end
-    end
+	for _, check in pairs(list) do
+		if name == check then
+			return true
+		end
+	end
 
-    return false
+	return false
 end
 
 -- register a handler that will be called for all installed servers
@@ -73,7 +75,7 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 		opts = vim.tbl_deep_extend("force", solc_opts, opts)
 	end
 
-    if not in_list(server.name, blacklist_servers) then
-        lspconfig[server.name].setup(opts)
-    end
+	if not in_list(server.name, blacklist_servers) then
+		lspconfig[server.name].setup(opts)
+	end
 end
