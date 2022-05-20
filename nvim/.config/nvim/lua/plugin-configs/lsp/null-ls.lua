@@ -37,10 +37,10 @@ null_ls.setup({
 			extra_args = { "--no-semi" },
 		}),
 		diagnostics.eslint.with({
-			only_local = true,
+			only_local = "node_modules/.bin",
 		}),
 		actions.eslint.with({
-			only_local = true,
+			only_local = "node_modules/.bin",
 		}),
 	},
 })
