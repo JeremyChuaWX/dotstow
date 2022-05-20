@@ -39,8 +39,5 @@ null_ls.setup({
 		diagnostics.eslint.with({
 			only_local = "node_modules/.bin",
 		}),
-		actions.eslint.with({
-			only_local = "node_modules/.bin",
-		}),
 	},
 })
