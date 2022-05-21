@@ -36,8 +36,8 @@ null_ls.setup({
 		formatting.prettier.with({
 			extra_args = { "--no-semi" },
 		}),
-		diagnostics.eslint.with({
-			only_local = "node_modules/.bin",
-		}),
+		-- diagnostics.eslint.with({
+		-- 	only_local = "node_modules/.bin",
+		-- }),
 	},
 })
