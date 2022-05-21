@@ -8,16 +8,18 @@ if not lspconfig_ok then
 	return
 end
 
+local functions = require("functions")
+
 lsp_installer.setup({
 	ensure_installed = {
 		"sumneko_lua",
 		"pyright",
 		"tsserver",
-		"emmet_ls",
 		"eslint",
+        "cssls",
+        "html",
 		"jsonls",
 		"jdtls",
-		"tailwindcss",
 		"solidity_ls",
 	},
 })
@@ -25,16 +27,6 @@ lsp_installer.setup({
 local blacklist_servers = {
 	"jdtls",
 }
-
-local function in_list(name, list)
-	for _, check in pairs(list) do
-		if name == check then
-			return true
-		end
-	end
-
-	return false
-end
 
 -- register a handler that will be called for all installed servers
 -- you may also register handlers on specific server instances instead
@@ -75,7 +67,7 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 		opts = vim.tbl_deep_extend("force", solc_opts, opts)
 	end
 
-	if not in_list(server.name, blacklist_servers) then
+	if not functions.in_list(server.name, blacklist_servers) then
 		lspconfig[server.name].setup(opts)
 	end
 end
