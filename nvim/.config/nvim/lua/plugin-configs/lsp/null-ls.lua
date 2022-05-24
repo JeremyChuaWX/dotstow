@@ -35,9 +35,10 @@ null_ls.setup({
 		-- js family
 		formatting.prettier.with({
 			extra_args = { "--no-semi" },
+			extra_filetypes = { "solidity" },
 		}),
-		-- diagnostics.eslint.with({
-		-- 	only_local = "node_modules/.bin",
-		-- }),
+		diagnostics.eslint_d.with({
+			only_local = "node_modules/.bin",
+		}),
 	},
 })
