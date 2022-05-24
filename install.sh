@@ -120,6 +120,10 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         fi
         echo "===== Done =====\n"
 
+        echo "\n===== Reduce key repeat delay ====="
+        sudo -u $SUDO_USER gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+        echo "===== Done =====\n"
+
         #-----------------#
         #- Update system -#
         #-----------------#
