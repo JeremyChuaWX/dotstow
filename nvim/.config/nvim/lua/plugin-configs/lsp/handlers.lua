@@ -86,6 +86,8 @@ local function formatting_callback(client, bufnr)
     )
 end
 
+M.formatting_callback = formatting_callback
+
 M.on_attach = function(client, bufnr)
     if client.name == "null-ls" then
         formatting_callback(client, bufnr)

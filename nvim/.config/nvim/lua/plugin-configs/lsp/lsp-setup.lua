@@ -15,7 +15,6 @@ lsp_installer.setup({
 		"sumneko_lua",
 		"pyright",
 		"tsserver",
-		"eslint",
         "cssls",
         "html",
 		"jsonls",
