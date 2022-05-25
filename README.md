@@ -26,3 +26,4 @@ sudo /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JeremyChuaWX/do
 
 # TODO
 - [ ] set up nvim-dap
+- [ ] fix stow for macOS
