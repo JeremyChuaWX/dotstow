@@ -23,6 +23,7 @@ alias fgrep="fgrep --color=auto"
 # shortcuts
 alias dstow="cd $HOME/.dotstow/"
 alias dev="cd $HOME/Documents/Development/"
+alias ppath="echo $PATH | tr '\:' '\n' | fzf"
 
 # tmux
 alias nmux="tmux new-session -s"
