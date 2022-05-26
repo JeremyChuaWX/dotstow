@@ -11,7 +11,7 @@ ts.setup {
         -- additional_vim_highlighting = false,
     },
     indent = {
-        enable = false,
+        enable = true,
         disable = {
             "yaml",
         },
@@ -23,7 +23,7 @@ ts.setup {
         enable = true,
     },
     yati = {
-        enable = true,
+        enable = false,
     }
 }
 
