@@ -90,11 +90,15 @@ if [[ $OSTYPE = "darwin"* ]] then
     echo "===== Done =====\n"
 
     echo "\n===== Installing utilities ====="
-    sudo -u $SUDO_USER brew install coreutils fzf git ripgrep fd tree tmux stow google-java-format
+    sudo -u $SUDO_USER brew install yarn coreutils fzf git ripgrep fd tree tmux stow 
     echo "===== Done =====\n"
 
     echo "\n===== Installing languages ====="
-    sudo -u $SUDO_USER brew install python3 go openjdk
+    sudo -u $SUDO_USER brew install python3 go openjdk deno node
+    echo "===== Done =====\n"
+
+    echo "\n===== Installing formatters ====="
+    sudo -u $SUDO_USER brew install google-java-format stylua
     echo "===== Done =====\n"
 
 fi
