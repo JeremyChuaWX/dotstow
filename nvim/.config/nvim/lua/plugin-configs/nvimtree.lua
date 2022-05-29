@@ -1,17 +1,9 @@
-vim.g.nvim_tree_add_trailing = 1
--- vim.g.nvim_tree_icons = {
--- 	git = {
--- 		unstaged = "[]",
--- 		staged = "[ﰶ]",
--- 		unmerged = "[]",
--- 		renamed = "[➜]",
--- 		untracked = "[]",
--- 		deleted = "[﯀]",
--- 		ignored = "[]",
--- 	},
--- }
+local status_ok, nvimtree = pcall(require, "nvim-tree")
+if not status_ok then
+	return
+end
 
-require("nvim-tree").setup({
+nvimtree.setup({
 	auto_reload_on_write = true,
 	disable_netrw = true,
 	hijack_cursor = false,
@@ -39,6 +31,7 @@ require("nvim-tree").setup({
 		},
 	},
 	renderer = {
+		add_trailing = true,
 		indent_markers = {
 			enable = true,
 			icons = {
