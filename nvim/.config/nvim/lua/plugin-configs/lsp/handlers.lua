@@ -1,59 +1,59 @@
 local M = {}
 
 M.setup = function()
-    local signs = {
-        { name = "DiagnosticSignError", text = "" },
-        { name = "DiagnosticSignWarn", text = "" },
-        { name = "DiagnosticSignHint", text = "" },
-        { name = "DiagnosticSignInfo", text = "" },
-    }
+	local signs = {
+		{ name = "DiagnosticSignError", text = "" },
+		{ name = "DiagnosticSignWarn", text = "" },
+		{ name = "DiagnosticSignHint", text = "" },
+		{ name = "DiagnosticSignInfo", text = "" },
+	}
 
-    for _, sign in ipairs(signs) do
-        vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-    end
+	for _, sign in ipairs(signs) do
+		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+	end
 
-    local config = {
-        virtual_text = false,
-        signs = {
-            active = signs,
-        },
-        update_in_insert = true,
-        underline = true,
-        severity_sort = true,
-        float = {
-            focusable = false,
-            style = "minimal",
-            border = "single",
-            source = "always",
-            header = "",
-            prefix = "",
-        },
-    }
+	local config = {
+		virtual_text = false,
+		signs = {
+			active = signs,
+		},
+		update_in_insert = true,
+		underline = true,
+		severity_sort = true,
+		float = {
+			focusable = false,
+			style = "minimal",
+			border = "single",
+			source = "always",
+			header = "",
+			prefix = "",
+		},
+	}
 
-    vim.diagnostic.config(config)
+	vim.diagnostic.config(config)
 
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = "single",
-    })
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+		border = "single",
+	})
 
-    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = "single",
-    })
+	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+		border = "single",
+	})
 end
 
 local function lsp_highlight_document(client)
-    local status_ok, illuminate = pcall(require, "illuminate")
-    if not status_ok then
-        return
-    end
+	local status_ok, illuminate = pcall(require, "illuminate")
+	if not status_ok then
+		return
+	end
 
-    illuminate.on_attach(client)
+	illuminate.on_attach(client)
 end
 
 local function lsp_keymaps(bufnr)
-    local set = function (mode, lhs, rhs)
-        vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, { noremap = true, silent = true })
-    end
+	local set = function(mode, lhs, rhs)
+		vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, { noremap = true, silent = true })
+	end
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
@@ -76,25 +76,17 @@ local function lsp_keymaps(bufnr)
 end
 
 local function formatting_callback(client, bufnr)
-    vim.keymap.set(
-        "n", "gf",
-        function()
-            local params = vim.lsp.util.make_formatting_params({})
-            client.request("textDocument/formatting", params, nil, bufnr)
-        end,
-        { buffer = bufnr }
-    )
+	vim.keymap.set("n", "gf", function()
+		local params = vim.lsp.util.make_formatting_params({})
+		client.request("textDocument/formatting", params, nil, bufnr)
+	end, { buffer = bufnr })
 end
 
 M.formatting_callback = formatting_callback
 
 M.on_attach = function(client, bufnr)
-    if client.name == "null-ls" then
-        formatting_callback(client, bufnr)
-    end
-
-    lsp_keymaps(bufnr)
-    lsp_highlight_document(client)
+	lsp_keymaps(bufnr)
+	lsp_highlight_document(client)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -102,7 +94,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
-    return
+	return
 end
 
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)

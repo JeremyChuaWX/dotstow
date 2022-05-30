@@ -11,7 +11,13 @@ null_ls.setup({
 	debug = false,
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 	update_in_insert = true,
-	on_attach = require("plugin-configs.lsp.handlers").on_attach,
+	on_attach = function(client, bufnr)
+		local formatting_fn = require("plugin-configs.lsp.handlers").formatting_callback
+		formatting_fn(client, bufnr)
+
+		local attach_fn = require("plugin-configs.lsp.handlers").on_attach
+		attach_fn(client, bufnr)
+	end,
 
 	sources = {
 		-- general
