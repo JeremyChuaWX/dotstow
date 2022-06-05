@@ -32,11 +32,11 @@ local workspace_dir = WORKSPACE_PATH .. project_name
 -- bundles for dap
 -- git clone https://github.com/microsoft/java-debug
 
--- local bundles = {
---     vim.fn.glob(
---         home .. "/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"
---     ),
--- }
+local bundles = {
+    vim.fn.glob(
+        home .. "/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"
+    ),
+}
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
