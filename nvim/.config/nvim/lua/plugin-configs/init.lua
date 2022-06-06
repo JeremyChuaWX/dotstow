@@ -20,6 +20,7 @@ require "plugin-configs.zen-mode"
 
 -- lsp
 require "plugin-configs.lsp"
+require "plugin-configs.dap"
 
 -- cmp
 require "plugin-configs.luasnip"
