@@ -28,11 +28,8 @@ cmp.setup({
 			luasnip.lsp_expand(args.body)
 		end,
 	},
-    completion = {
-        keyword_length = 5,
-    },
 	mapping = cmp.mapping.preset.insert({
-		["<C-y>"] = cmp.mapping({
+		["<C-Space>"] = cmp.mapping({
 			i = cmp.mapping.complete(),
 		}),
 		["<C-e>"] = cmp.mapping({
