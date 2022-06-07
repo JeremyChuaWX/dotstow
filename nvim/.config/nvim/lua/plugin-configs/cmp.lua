@@ -28,8 +28,10 @@ cmp.setup({
 			luasnip.lsp_expand(args.body)
 		end,
 	},
+    completion = {
+        keyword_length = 5,
+    },
 	mapping = cmp.mapping.preset.insert({
-		-- ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
 		["<C-y>"] = cmp.mapping({
 			i = cmp.mapping.complete(),
 		}),
@@ -38,6 +40,7 @@ cmp.setup({
 			c = cmp.mapping.close(),
 		}),
 		["<CR>"] = cmp.mapping.confirm({
+			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
 		}),
 		["<Tab>"] = cmp.mapping(function(fallback)
@@ -61,10 +64,6 @@ cmp.setup({
 			end
 		end, { "i", "s" }),
 	}),
-	confirm_opts = {
-		behavior = cmp.ConfirmBehavior.Replace,
-		select = false,
-	},
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
