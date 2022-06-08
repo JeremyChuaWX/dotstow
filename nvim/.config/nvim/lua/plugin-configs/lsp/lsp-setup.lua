@@ -16,6 +16,7 @@ lsp_installer.setup({
 		"pyright",
 		"tsserver",
         "cssls",
+        "cssmodules_ls",
         "html",
 		"jsonls",
 		"jdtls",
