@@ -64,6 +64,8 @@ local options = {
     joinspaces = false,
     backspace = { "indent", "eol", "start", },
     foldlevelstart = 99,
+    list = true,
+    listchars = {eol = ""},
 
     ---------------------
     -- buffer and tabs --
