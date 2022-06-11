@@ -7,6 +7,7 @@ require "plugin-configs.indent"
 require "plugin-configs.treesitter"
 -- require "plugin-configs.surround"
 require "plugin-configs.colorizer"
+require "plugin-configs.comment"
 
 -- interface
 require "plugin-configs.telescope"

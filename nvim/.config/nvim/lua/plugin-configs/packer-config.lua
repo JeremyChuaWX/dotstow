@@ -53,6 +53,10 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("norcalli/nvim-colorizer.lua")
 
+	-- comment
+	use("numToStr/Comment.nvim")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+
 	-- interface
 	use({ "akinsho/bufferline.nvim", branch = "main" })
 	use({ "akinsho/toggleterm.nvim", branch = "main" })
