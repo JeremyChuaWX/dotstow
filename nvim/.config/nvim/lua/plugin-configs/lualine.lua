@@ -3,11 +3,6 @@ if not lualine_ok then
 	return
 end
 
--- local gps_ok, gps = pcall(require, "nvim-gps")
--- if not gps_ok then
--- 	return
--- end
-
 lualine.setup({
 	options = {
 		globalstatus = true,
@@ -27,16 +22,13 @@ lualine.setup({
 
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = { "diagnostics" },
+		lualine_b = {},
 		lualine_c = {
-			"%1n:",
-			{
-				"filename",
-				path = 2,
-				shorting_target = 999, -- Shortens path to leave 40 spaces in the window
-			},
+			{ "filename", path = 3 },
 		},
-		lualine_x = { "filetype" },
+		lualine_x = {
+			"filetype",
+		},
 		lualine_y = { "branch", "diff" },
 		lualine_z = { "%l/%L" },
 	},
