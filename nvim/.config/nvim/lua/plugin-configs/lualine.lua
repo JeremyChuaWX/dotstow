@@ -35,10 +35,6 @@ lualine.setup({
 				path = 2,
 				shorting_target = 999, -- Shortens path to leave 40 spaces in the window
 			},
-			-- {
-			-- 	gps.get_location,
-			-- 	cond = gps.is_available,
-			-- },
 		},
 		lualine_x = { "filetype" },
 		lualine_y = { "branch", "diff" },
