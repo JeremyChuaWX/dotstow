@@ -29,7 +29,7 @@ cmp.setup({
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-y>"] = cmp.mapping({
+		["<C-Space>"] = cmp.mapping({
 			i = cmp.mapping.complete(),
 		}),
 		["<C-e>"] = cmp.mapping({
