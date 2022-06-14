@@ -12,7 +12,7 @@ M.setup = function()
 		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 	end
 
-	local config = {
+	local diagnosticConfig = {
 		virtual_text = false,
 		signs = {
 			active = signs,
@@ -30,7 +30,7 @@ M.setup = function()
 		},
 	}
 
-	vim.diagnostic.config(config)
+	vim.diagnostic.config(diagnosticConfig)
 
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 		border = "single",
@@ -75,14 +75,12 @@ local function lsp_keymaps(bufnr)
 	set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>")
 end
 
-local function formatting_callback(client, bufnr)
+M.formatting_callback = function(client, bufnr)
 	vim.keymap.set("n", "gf", function()
 		local params = vim.lsp.util.make_formatting_params({})
 		client.request("textDocument/formatting", params, nil, bufnr)
 	end, { buffer = bufnr })
 end
-
-M.formatting_callback = formatting_callback
 
 M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)

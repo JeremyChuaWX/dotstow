@@ -15,9 +15,9 @@ lsp_installer.setup({
 		"sumneko_lua",
 		"pyright",
 		"tsserver",
-        "cssls",
-        "cssmodules_ls",
-        "html",
+		"cssls",
+		"cssmodules_ls",
+		"html",
 		"jsonls",
 		"jdtls",
 		"solidity_ls",
@@ -27,9 +27,6 @@ lsp_installer.setup({
 local blacklist_servers = {
 	"jdtls",
 }
-
--- register a handler that will be called for all installed servers
--- you may also register handlers on specific server instances instead
 
 for _, server in pairs(lsp_installer.get_installed_servers()) do
 	local opts = {
