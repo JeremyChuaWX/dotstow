@@ -117,12 +117,6 @@ nvimtree.setup({
 	},
 })
 
--- keymaps
-local set = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-set("", "<leader>e", ":NvimTreeToggle<CR>", opts)
-
 -- mappings when in NvimTree buffer
 -- local list = {
 -- 	{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },

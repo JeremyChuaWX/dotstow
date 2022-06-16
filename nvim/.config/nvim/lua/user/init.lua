@@ -2,7 +2,7 @@ require "user.impatient"
 
 require "user.options"
 require "user.colorscheme"
-require "user.keybinds"
+require "user.keymaps"
 require "user.autocommands"
 
 require "user.plugins"
@@ -21,11 +21,11 @@ require "user.bufferline"
 require "user.lualine"
 require "user.dressing"
 require "user.nvimtree"
-require "user.zen-mode"
+require "user.zen"
 
 -- lsp
 require "user.lsp"
-require "user.dap"
+require "user.dap-configs"
 
 -- cmp
 require "user.luasnip"

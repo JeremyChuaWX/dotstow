@@ -49,16 +49,3 @@ telescope.setup({
 })
 
 telescope.load_extension("fzf")
-
--- keymaps
-local set = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-set("n", "tt", ":Telescope<CR>", opts)
-set("n", "tf", ":lua require'telescope.builtin'.find_files{}<CR>", opts)
-set("n", "tg", ":lua require'telescope.builtin'.live_grep{}<CR>", opts)
-set("n", "th", ":lua require'telescope.builtin'.help_tags{}<CR>", opts)
-set("n", "tb", ":lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>", opts)
-set("n", "tB", ":lua require'telescope.builtin'.buffers{}<CR>", opts)
-set("n", "ts", ":lua require'telescope.builtin'.git_status{}<CR>", opts)
-set("n", "td", ":lua require'telescope.builtin'.diagnostics{}<CR>", opts)

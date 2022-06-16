@@ -49,12 +49,3 @@ zen.setup({
 	-- callback where you can add custom code when the Zen window closes
 	-- on_close = function() end,
 })
-
--- keymaps
-local set = function(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, { silent = true })
-end
-
-set("n", "<leader>z", function()
-	require("zen-mode").toggle()
-end)

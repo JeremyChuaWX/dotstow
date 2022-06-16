@@ -33,12 +33,3 @@ bufferline.setup {
         }
     }
 }
-
--- keymaps
-local set = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-set("n", "L", ":BufferLineCycleNext<CR>", opts)
-set("n", "H", ":BufferLineCyclePrev<CR>", opts)
-set("n", "<leader>L", ":BufferLineMoveNext<CR>", opts)
-set("n", "<leader>H", ":BufferLineMovePrev<CR>", opts)
