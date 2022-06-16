@@ -49,7 +49,6 @@ return packer.startup(function(use)
 	-- editor
 	use("lukas-reineke/indent-blankline.nvim")
 	use("windwp/nvim-autopairs")
-	-- use "JeremyChuaWX/surround.nvim"
 	use("tpope/vim-surround")
 	use("norcalli/nvim-colorizer.lua")
 

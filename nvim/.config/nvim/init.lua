@@ -1,2 +1,1 @@
-require "core-configs"
-require "plugin-configs"
+require "user"

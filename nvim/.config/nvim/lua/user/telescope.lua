@@ -62,6 +62,3 @@ set("n", "tb", ":lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>"
 set("n", "tB", ":lua require'telescope.builtin'.buffers{}<CR>", opts)
 set("n", "ts", ":lua require'telescope.builtin'.git_status{}<CR>", opts)
 set("n", "td", ":lua require'telescope.builtin'.diagnostics{}<CR>", opts)
--- set("n", "tr", ":lua require'telescope.builtin'.lsp_references{}<CR>", opts)
--- set("n", "td", ":lua require'telescope.builtin'.lsp_definitions{}<CR>", opts)
--- set("n", "ts", ":lua require'telescope.builtin'.lsp_document_symbols{}<CR>", opts)

@@ -1,4 +1,7 @@
 local dap_ok, dap = pcall(require, "dap")
+if not dap_ok then
+	return
+end
 
 local dapui_ok, dapui = pcall(require, "dapui")
 if dapui_ok then

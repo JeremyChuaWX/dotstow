@@ -1,6 +1,6 @@
 local M = {}
 
-function M.in_list(name, list)
+M.in_list = function(name, list)
 	for _, check in pairs(list) do
 		if name == check then
 			return true
