@@ -24,7 +24,7 @@ lualine.setup({
 		lualine_a = { "mode" },
 		lualine_b = {},
 		lualine_c = {
-			{ "filename", path = 3 },
+			{ "filename", path = 3, shorting_target = 100 },
 		},
 		lualine_x = {
 			"filetype",
