@@ -174,7 +174,7 @@ if [[ $OSTYPE = "linux-gnu" ]] then
         echo "===== Done =====\n"
 
         echo "\n===== Installing utilities ====="
-        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd-find gcc-c++
+        sudo dnf -y install zsh stow pass breeze-cursor-theme gnome-tweaks ripgrep fd-find gcc-c++ gnome-extensions-app gnome-shell-extension-appindicator
         echo "===== Done =====\n"
 
         echo "\n===== Installing languages ====="
