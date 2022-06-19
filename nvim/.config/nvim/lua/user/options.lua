@@ -64,9 +64,9 @@ local options = {
 	joinspaces = false,
 	backspace = { "indent", "eol", "start" },
 
-    -------------
-    -- folding --
-    -------------
+	-------------
+	-- folding --
+	-------------
 	foldlevelstart = 99,
 	foldcolumn = "1",
 	fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]],
