@@ -32,7 +32,7 @@ packer.init({
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost packer-config.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -60,7 +60,6 @@ return packer.startup(function(use)
 	use({ "akinsho/bufferline.nvim", branch = "main" })
 	use({ "akinsho/toggleterm.nvim", branch = "main" })
 	use("nvim-lualine/lualine.nvim")
-	use("simrat39/symbols-outline.nvim")
 	use("stevearc/dressing.nvim")
 	use("kyazdani42/nvim-tree.lua")
 	use("folke/zen-mode.nvim")
@@ -80,9 +79,12 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
+
+	-- lsp plugins
 	use("ray-x/lsp_signature.nvim")
 	use("RRethy/vim-illuminate")
 	use("j-hui/fidget.nvim")
+	use("simrat39/symbols-outline.nvim")
 
 	-- java
 	use("mfussenegger/nvim-jdtls")
