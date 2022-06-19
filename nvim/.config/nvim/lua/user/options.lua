@@ -63,8 +63,13 @@ local options = {
 	whichwrap = "b,s,<,>,[,]",
 	joinspaces = false,
 	backspace = { "indent", "eol", "start" },
+
+    -------------
+    -- folding --
+    -------------
 	foldlevelstart = 99,
 	foldcolumn = "1",
+	fillchars = { eob = "", fold = "", foldopen = "", foldsep = "", foldclose = "" },
 
 	---------------------
 	-- buffer and tabs --
