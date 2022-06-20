@@ -3,9 +3,3 @@ vim.g.symbols_outline = {
     show_numbers = true,
     preview_bg_highlight = "Normal",
 }
-
--- keymaps
-local set = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-set("n", "<leader>s", ":SymbolsOutline<CR>", opts)

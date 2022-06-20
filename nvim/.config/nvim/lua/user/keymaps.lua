@@ -129,3 +129,19 @@ end, { desc = "dap step out" })
 set("n", "<leader>t", function()
 	require("dap").terminate()
 end, { desc = "dap terminate" })
+
+-- illuminate
+set("n", "<C-o>", function()
+	require("illuminate").next_reference({ wrap = true })
+end, { desc = "illuminate next reference" })
+
+set("n", "<C-i>", function()
+	require("illuminate").next_reference({ reverse = true, wrap = true })
+end, { desc = "illuminate prev reference" })
+
+-- symbols outline
+set("n", "<leader>s", ":SymbolsOutline<CR>")
+
+-- icon picker
+set("i", "<C-i>", "<cmd>PickIconsInsert<cr>")
+set("n", "<Leader>i", "<cmd>PickIcons<cr>")

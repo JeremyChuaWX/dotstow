@@ -114,6 +114,14 @@ return packer.startup(function(use)
 	-- colorschemes
 	use("rebelot/kanagawa.nvim")
 
+	-- icon picker
+	use({
+		"ziontee113/icon-picker.nvim",
+		config = function()
+			require("icon-picker")
+		end,
+	})
+
 	if PACKER_BOOTSTRAP then
 		packer.sync()
 	end
