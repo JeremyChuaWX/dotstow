@@ -1,110 +1,98 @@
-local options = {
-	-------------
-	-- general --
-	-------------
-	compatible = false,
-	syntax = "on",
-	clipboard = "unnamedplus",
-	ttyfast = true,
-	lazyredraw = true,
-	updatetime = 50,
-	-- timeout = true,
-	-- ttimeout = true,
-	timeoutlen = 300,
-	-- ttimeoutlen = 10,
-	mouse = "a",
-	autochdir = true,
+local opt = vim.opt
 
-	---------------------------
-	-- backup, swap, viminfo --
-	---------------------------
-	backup = false,
-	swapfile = false,
+-------------
+-- general --
+-------------
+opt.compatible = false
+opt.syntax = "on"
+opt.clipboard = "unnamedplus"
+opt.ttyfast = true
+opt.lazyredraw = true
+opt.updatetime = 50
+opt.timeoutlen = 300
+opt.mouse = "a"
+opt.autochdir = true
 
-	-------------------------
-	-- file type detection --
-	-------------------------
-	filetype = "on",
-	-- filetype plugin
-	-- filetype indent
+---------------------------
+-- backup, swap, viminfo --
+---------------------------
+opt.backup = false
+opt.swapfile = false
 
-	--------------------
-	-- tab completion --
-	--------------------
-	wildmenu = true,
-	wildignore = vim.opt.wildignore + { ".git", ".DS_Store" },
-	wildignorecase = true,
-	wildmode = { "list", "longest" },
+-------------------------
+-- file type detection --
+-------------------------
+opt.filetype = "on"
 
-	---------------
-	-- interface --
-	---------------
-	ruler = true,
-	-- relativenumber = true,
-	number = true,
-	showcmd = true,
-	cmdheight = 1,
-	laststatus = 3,
-	visualbell = true,
-	scrolloff = 10,
-	splitbelow = true,
-	splitright = true,
-	signcolumn = "yes",
-	completeopt = { "menu", "menuone", "noselect" },
-	-- colorcolumn = "100",
+--------------------
+-- tab completion --
+--------------------
+opt.wildmenu = true
+opt.wildignore:append({ ".git", ".DS_Store" })
+opt.wildignorecase = true
+opt.wildmode = { "list", "longest" }
 
-	------------
-	-- editor --
-	------------
-	encoding = "utf-8",
-	wrap = true,
-	linebreak = true,
-	-- matchpairs = vim.opt.matchpairs + "<:>",
-	whichwrap = "b,s,<,>,[,]",
-	joinspaces = false,
-	backspace = { "indent", "eol", "start" },
+---------------
+-- interface --
+---------------
+opt.ruler = true
+opt.number = true
+opt.showcmd = true
+opt.cmdheight = 1
+opt.laststatus = 3
+opt.visualbell = true
+opt.scrolloff = 10
+opt.splitbelow = true
+opt.splitright = true
+opt.signcolumn = "yes"
+opt.completeopt = { "menu", "menuone", "noselect" }
 
-	-------------
-	-- folding --
-	-------------
-	foldlevelstart = 99,
-	foldcolumn = "1",
-	fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]],
+------------
+-- editor --
+------------
+opt.encoding = "utf-8"
+opt.wrap = true
+opt.linebreak = true
+opt.whichwrap = "b,s,<,>,[,]"
+opt.joinspaces = false
+opt.backspace = { "indent", "eol", "start" }
 
-	---------------------
-	-- buffer and tabs --
-	---------------------
-	hidden = true,
-	autoread = true,
+-------------
+-- folding --
+-------------
+opt.foldlevelstart = 99
+opt.foldcolumn = "1"
+vim.opt.fillchars:append("foldopen:,foldclose:,foldsep: ")
 
-	-----------------
-	-- indentation --
-	-----------------
-	expandtab = true,
-	smarttab = true,
-	tabstop = 4,
-	softtabstop = 4,
-	shiftwidth = 4,
-	autoindent = true,
-	smartindent = true,
+---------------------
+-- buffer and tabs --
+---------------------
+opt.hidden = true
+opt.autoread = true
 
-	----------------
-	-- appearance --
-	----------------
-	background = "dark",
-	cursorline = true,
-	termguicolors = true,
+-----------------
+-- indentation --
+-----------------
+opt.expandtab = true
+opt.smarttab = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.autoindent = true
+opt.smartindent = true
 
-	------------
-	-- search --
-	------------
-	ignorecase = true,
-	smartcase = true,
-	hlsearch = true,
-	incsearch = true,
-	wrapscan = true,
-}
+----------------
+-- appearance --
+----------------
+opt.background = "dark"
+opt.cursorline = true
+opt.termguicolors = true
 
-for k, v in pairs(options) do
-	vim.opt[k] = v
-end
+------------
+-- search --
+------------
+opt.ignorecase = true
+opt.smartcase = true
+opt.hlsearch = true
+opt.incsearch = true
+opt.wrapscan = true
