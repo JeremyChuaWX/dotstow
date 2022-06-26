@@ -21,6 +21,7 @@ lsp_installer.setup({
 		"jsonls",
 		"jdtls",
 		"solidity_ls",
+		"marksman",
 	},
 })
 
