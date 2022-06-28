@@ -27,6 +27,7 @@ lsp_installer.setup({
 
 local blacklist_servers = {
 	"jdtls",
+	"tsserver",
 }
 
 for _, server in pairs(lsp_installer.get_installed_servers()) do
@@ -63,6 +64,15 @@ for _, server in pairs(lsp_installer.get_installed_servers()) do
 	if server.name == "solc" then
 		local solc_opts = require("user.lsp.settings.solc")
 		opts = vim.tbl_deep_extend("force", solc_opts, opts)
+	end
+
+	if server.name == "tsserver" then
+		local typescript_ok, typescript = pcall(require, "typescript")
+		if typescript_ok then
+			typescript.setup({
+				server = opts,
+			})
+		end
 	end
 
 	if not functions.in_list(server.name, blacklist_servers) then
