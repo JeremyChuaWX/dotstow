@@ -39,10 +39,7 @@ null_ls.setup({
 		formatting.google_java_format,
 
 		-- js family
-		formatting.prettier.with({
-			extra_args = { "--no-semi" },
-			extra_filetypes = { "solidity" },
-		}),
+		formatting.prettier,
 		diagnostics.eslint_d.with({
 			only_local = "node_modules/.bin",
 		}),

@@ -71,7 +71,7 @@ nvimtree.setup({
 	},
 	filters = {
 		dotfiles = false,
-		custom = { "^\\.git$", "^node_modules$" },
+		custom = { "^\\.git$", "^node_modules$", "^\\.DS_Store" },
 		exclude = {},
 	},
 	git = {
