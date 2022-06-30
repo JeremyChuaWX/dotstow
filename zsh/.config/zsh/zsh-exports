@@ -40,3 +40,9 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
+
+#---------------------#
+#-fzf default options-#
+#---------------------#
+
+export FZF_DEFAULT_OPTS="--reverse --height 40% --border=sharp --info=hidden"
