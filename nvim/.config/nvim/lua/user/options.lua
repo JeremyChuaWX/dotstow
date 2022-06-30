@@ -61,8 +61,8 @@ opt.backspace = { "indent", "eol", "start" }
 -- folding --
 -------------
 opt.foldlevelstart = 99
-opt.foldcolumn = "1"
-vim.opt.fillchars:append("foldopen:,foldclose:,foldsep: ")
+-- opt.foldcolumn = "1"
+-- vim.opt.fillchars:append("foldopen:,foldclose:,foldsep: ")
 
 ---------------------
 -- buffer and tabs --

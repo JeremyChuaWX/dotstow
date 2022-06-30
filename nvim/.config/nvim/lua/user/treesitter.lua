@@ -5,7 +5,7 @@ end
 
 ts.setup({
 	ensure_installed = "all",
-	ignore_install = { "phpdoc" },
+	ignore_install = { "phpdoc", "beancount" },
 	highlight = {
 		enable = true,
 		-- additional_vim_highlighting = false,
