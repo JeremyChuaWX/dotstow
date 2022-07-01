@@ -90,7 +90,7 @@ if [[ $OSTYPE = "darwin"* ]] then
     echo "===== Done =====\n"
 
     echo "\n===== Installing utilities ====="
-    sudo -u $SUDO_USER brew install yarn coreutils fzf git ripgrep fd tree tmux stow 
+    sudo -u $SUDO_USER brew install yarn coreutils fzf git ripgrep fd tree tmux stow gnutls
     echo "===== Done =====\n"
 
     echo "\n===== Installing languages ====="
