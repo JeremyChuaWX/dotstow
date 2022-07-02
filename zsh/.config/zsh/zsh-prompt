@@ -21,7 +21,8 @@ zstyle ":vcs_info:*" enable git
 precmd() { vcs_info }
 
 # format git prompt
-zstyle ':vcs_info:git*' formats "< %b>"
+# zstyle ':vcs_info:git*' formats " %b "
+zstyle ':vcs_info:git*' formats " %b "
 
 #--------#
 #-design-#
@@ -29,11 +30,15 @@ zstyle ':vcs_info:git*' formats "< %b>"
 
 setopt PROMPT_SUBST
 
-PROMPT="%B[%b %2~ %B] :%b "
-RPROMPT="${vcs_info_msg_0_}"
+PROMPT=" "
+RPROMPT=" "
 
 function zle-line-init zle-keymap-select {
-    PROMPT="${${KEYMAP/vicmd/%B[%b %2~ %B]%b NRM%B:%b }/(main|viins)/%B[%b %2~ %B]%b INS%B:%b }"
+    PROMPT="${${KEYMAP/vicmd/
+ %5~
+ NRM }/(main|viins)/
+ %5~
+ INS }"
     RPROMPT="${vcs_info_msg_0_}"
     # RPROMPT="${${KEYMAP/vicmd/ %B(%b normal %B)%b }/(main|viins)/ %B(%b insert %B)%b }"
     zle reset-prompt
