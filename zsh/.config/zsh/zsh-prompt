@@ -35,8 +35,7 @@ PROMPT=""
 function zle-line-init zle-keymap-select {
 VIM_MODE="${${KEYMAP/vicmd/NRM}/(main|viins)/INS}"
 
-PROMPT="%U${(r:$COLUMNS:: :)}%u
-
+PROMPT="
 ${vcs_info_msg_0_} %5~
 ${VIM_MODE} "
 zle reset-prompt
