@@ -13,15 +13,12 @@ local functions = require("user.functions")
 lsp_installer.setup({
 	ensure_installed = {
 		"sumneko_lua",
-		"pyright",
 		"tsserver",
-		"cssls",
-		"cssmodules_ls",
-		"html",
 		"jsonls",
 		"jdtls",
 		"solidity_ls",
-		"marksman",
+		"tailwindcss",
+        "prismals",
 	},
 })
 
