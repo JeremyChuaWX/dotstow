@@ -22,7 +22,7 @@ precmd() { vcs_info }
 
 # format git prompt
 # zstyle ':vcs_info:git*' formats " %b "
-zstyle ':vcs_info:git*' formats "(%b)"
+zstyle ':vcs_info:git*' formats "%F{008}(%b)%f "
 
 #--------#
 #-design-#
@@ -36,8 +36,8 @@ function zle-line-init zle-keymap-select {
 VIM_MODE="${${KEYMAP/vicmd/NRM}/(main|viins)/INS}"
 
 PROMPT="
-${vcs_info_msg_0_} %5~
-${VIM_MODE} "
+${vcs_info_msg_0_}%5~
+${VIM_MODE} %F{003}~>%f "
 zle reset-prompt
 }
 
