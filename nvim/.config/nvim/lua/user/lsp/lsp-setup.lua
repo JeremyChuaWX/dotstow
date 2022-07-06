@@ -18,7 +18,7 @@ lsp_installer.setup({
 		"jdtls",
 		"solidity_ls",
 		"tailwindcss",
-        "prismals",
+		"prismals",
 	},
 })
 
