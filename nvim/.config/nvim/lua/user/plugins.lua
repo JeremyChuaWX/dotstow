@@ -52,6 +52,9 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("norcalli/nvim-colorizer.lua")
 
+	-- hop
+	use({ "phaazon/hop.nvim", branch = "v2" })
+
 	-- comment
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
