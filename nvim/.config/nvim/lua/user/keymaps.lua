@@ -131,11 +131,11 @@ set("n", "<leader>t", function()
 end, { desc = "dap terminate" })
 
 -- illuminate
-set("n", "<C-o>", function()
+set("n", "'", function()
 	require("illuminate").next_reference({ wrap = true })
 end, { desc = "illuminate next reference" })
 
-set("n", "<C-i>", function()
+set("n", '"', function()
 	require("illuminate").next_reference({ reverse = true, wrap = true })
 end, { desc = "illuminate prev reference" })
 
@@ -143,5 +143,4 @@ end, { desc = "illuminate prev reference" })
 set("n", "<leader>s", ":SymbolsOutline<CR>")
 
 -- icon picker
-set("i", "<C-i>", "<cmd>PickIconsInsert<cr>")
 set("n", "<Leader>i", "<cmd>PickIcons<cr>")
