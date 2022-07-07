@@ -37,7 +37,7 @@ null_ls.setup({
 
 		-- js family
 		formatting.prettier,
-		diagnostics.eslint_d.with({
+		diagnostics.eslint.with({
 			only_local = "node_modules/.bin",
 		}),
 	},
