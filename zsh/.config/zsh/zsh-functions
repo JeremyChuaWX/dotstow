@@ -42,3 +42,13 @@ function fuzzy_open() {
 function mkcd() {
     mkdir -p "$1" && cd "$1"
 }
+
+function fuzzy_tmux_attach() {
+    STR=$(tmux list-sessions -F \#S | fzf)
+    [[ $STR ]] && tmux attach -t $STR
+}
+
+function fuzzy_tmux_kill() {
+    STR=$(tmux list-sessions -F \#S | fzf)
+    [[ $STR ]] && tmux kill-session -t $STR
+}

@@ -93,6 +93,6 @@ opt.termguicolors = true
 ------------
 opt.ignorecase = true
 opt.smartcase = true
-opt.hlsearch = true
+opt.hlsearch = false
 opt.incsearch = true
 opt.wrapscan = true
