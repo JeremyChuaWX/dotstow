@@ -38,6 +38,8 @@ fi
 #-node version manager-#
 #----------------------#
 
+eval "$(fnm env --use-on-cd)"
+
 #---------------------#
 #-fzf default options-#
 #---------------------#
