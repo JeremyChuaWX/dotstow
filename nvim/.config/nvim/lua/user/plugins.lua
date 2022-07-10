@@ -55,6 +55,9 @@ return packer.startup(function(use)
 	-- hop
 	use({ "phaazon/hop.nvim", branch = "v2" })
 
+	-- bufdelete
+	use("famiu/bufdelete.nvim")
+
 	-- comment
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
@@ -66,7 +69,6 @@ return packer.startup(function(use)
 	use("stevearc/dressing.nvim")
 	use("kyazdani42/nvim-tree.lua")
 	use("folke/zen-mode.nvim")
-	use("famiu/bufdelete.nvim")
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
