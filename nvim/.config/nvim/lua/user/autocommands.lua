@@ -1,4 +1,7 @@
-local format_settings = vim.api.nvim_create_autocmd("BufWinEnter", {
+local augroup = vim.api.nvim_create_augroup("user_cmds", { clear = true })
+
+vim.api.nvim_create_autocmd("BufWinEnter", {
+	group = augroup,
 	desc = "Remove format options",
 	callback = function()
 		vim.opt.formatoptions = vim.opt.formatoptions - "c"
@@ -7,7 +10,8 @@ local format_settings = vim.api.nvim_create_autocmd("BufWinEnter", {
 	end,
 })
 
-local js_family_settings = vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+	group = augroup,
 	desc = "Set local indent settings for js family",
 	pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.json" },
 	callback = function()
@@ -18,12 +22,21 @@ local js_family_settings = vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead"
 })
 
 -- highlight on yank
-local highlight_on_yank = vim.api.nvim_create_autocmd("TextYankPost", {
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = augroup,
 	desc = "Highlight text after yanking",
 	callback = function()
 		vim.highlight.on_yank({
-			higroup = "Search",
+			higroup = "Visual",
 			timeout = 200,
 		})
 	end,
+})
+
+-- use q to quit
+vim.api.nvim_create_autocmd("FileType", {
+	group = augroup,
+	pattern = { "help", "man" },
+	desc = "Use q to close the window",
+	command = "nnoremap <buffer> q <cmd>quit<cr>",
 })
