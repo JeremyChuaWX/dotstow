@@ -144,3 +144,11 @@ set("n", "<leader>s", ":SymbolsOutline<CR>")
 
 -- icon picker
 set("n", "<Leader>i", "<cmd>PickIcons<cr>")
+
+-- bufdelete
+local bf_ok, bf = pcall(require, "bufdelete")
+if bf_ok then
+	set("n", "<leader>d", function()
+		bf.bufdelete(0, true)
+	end, { desc = "Bufdelete without changing layout" })
+end

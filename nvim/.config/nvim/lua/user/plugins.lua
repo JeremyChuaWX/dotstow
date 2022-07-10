@@ -66,6 +66,7 @@ return packer.startup(function(use)
 	use("stevearc/dressing.nvim")
 	use("kyazdani42/nvim-tree.lua")
 	use("folke/zen-mode.nvim")
+	use("famiu/bufdelete.nvim")
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
