@@ -49,7 +49,7 @@ if [[ $OSTYPE = "darwin"* ]] then
     echo "\n===== Setting system configurations ====="
 
     # Faster key repeat
-    defaults write NSGlobalDomain KeyRepeat -int 1.5
+    defaults write NSGlobalDomain KeyRepeat 1.5
     defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
     # Show filename extensions by default
@@ -58,6 +58,15 @@ if [[ $OSTYPE = "darwin"* ]] then
     # Enable tap-to-click
     defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
     defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+    # Full path in finder
+    defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+    # Folders first in finder
+    defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+    # Only pinned in dock
+    defaults write com.apple.dock static-only -bool true
 
     echo "===== Done =====\n"
 
