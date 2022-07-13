@@ -22,13 +22,11 @@ lualine.setup({
 
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = {},
+		lualine_b = { "diagnostics" },
 		lualine_c = {
 			{ "filename", path = 3, shorting_target = 100 },
 		},
-		lualine_x = {
-			"filetype",
-		},
+		lualine_x = { "filetype" },
 		lualine_y = { "branch", "diff" },
 		lualine_z = { "%l/%L" },
 	},
