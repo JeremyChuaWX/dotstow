@@ -49,7 +49,7 @@ if [[ $OSTYPE = "darwin"* ]] then
     echo "\n===== Setting system configurations ====="
 
     # Faster key repeat
-    defaults write NSGlobalDomain KeyRepeat 1.5
+    defaults write NSGlobalDomain KeyRepeat -int 2
     defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
     # Show filename extensions by default
@@ -67,6 +67,10 @@ if [[ $OSTYPE = "darwin"* ]] then
 
     # Only pinned in dock
     defaults write com.apple.dock static-only -bool true
+
+    # Delay for hiding dock
+    defaults write com.apple.dock autohide-delay -float 0
+    defaults write com.apple.dock autohide-time-modifier -int 0
 
     echo "===== Done =====\n"
 
