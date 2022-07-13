@@ -72,6 +72,9 @@ if [[ $OSTYPE = "darwin"* ]] then
     defaults write com.apple.dock autohide-delay -float 0
     defaults write com.apple.dock autohide-time-modifier -int 0
 
+    # Change type of file for screenshots
+    defaults write com.apple.screencapture type jpg
+
     echo "===== Done =====\n"
 
     #--------------------#
