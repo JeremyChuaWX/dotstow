@@ -84,8 +84,8 @@ local config = {
 	on_attach = function(client, bufnr)
 		require("plugin-configs.lsp.handlers").on_attach(client, bufnr)
 		require("jdtls").setup_dap({ hotcodereplace = "auto" })
-        require("jdtls.dap").setup_dap_main_class_configs()
-        require('jdtls.setup').add_commands()
+		require("jdtls.dap").setup_dap_main_class_configs()
+		require("jdtls.setup").add_commands()
 	end,
 	capabilities = require("plugin-configs.lsp.handlers").capabilities,
 
@@ -177,8 +177,7 @@ local config = {
 -- or attaches to an existing client & server depending on the `root_dir`.
 require("jdtls").start_or_attach(config)
 
--- require('jdtls').setup_dap()
-
+-- user commands
 vim.cmd(
 	"command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_compile JdtCompile lua require('jdtls').compile(<f-args>)"
 )
