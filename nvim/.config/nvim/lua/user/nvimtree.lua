@@ -33,7 +33,7 @@ nvimtree.setup({
 	renderer = {
 		add_trailing = true,
 		indent_markers = {
-			enable = true,
+			enable = false,
 			icons = {
 				corner = "└ ",
 				edge = "│ ",

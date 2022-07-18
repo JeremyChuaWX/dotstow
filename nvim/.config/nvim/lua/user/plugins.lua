@@ -122,6 +122,7 @@ return packer.startup(function(use)
 
 	-- colorschemes
 	use("rebelot/kanagawa.nvim")
+	use("Yazeed1s/minimal.nvim")
 
 	-- icon picker
 	use({
