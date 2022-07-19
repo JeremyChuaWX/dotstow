@@ -36,9 +36,6 @@ set("n", "<C-Down>", ":resize +2<CR>")
 set("n", "<C-Left>", ":vertical resize -2<CR>")
 set("n", "<C-Right>", ":vertical resize +2<CR>")
 
--- buffer
-set("n", "<leader>d", ":bdelete<CR>")
-
 -- faster scrolling
 set("n", "<C-e>", "3<C-e>")
 set("n", "<C-y>", "3<C-y>")
@@ -60,76 +57,6 @@ set("n", "<leader><space>", ":noh<CR>")
 -- #-plugins-#
 -- #---------#
 
--- telescope
-set("n", "tt", ":Telescope<CR>")
-
-set("n", "tf", function()
-	require("telescope.builtin").find_files({})
-end, { desc = "telescope find files" })
-
-set("n", "tg", function()
-	require("telescope.builtin").live_grep({})
-end, { desc = "telescope live grep" })
-
-set("n", "th", function()
-	require("telescope.builtin").help_tags({})
-end, { desc = "telescope help tags" })
-
-set("n", "tb", function()
-	require("telescope.builtin").current_buffer_fuzzy_find({})
-end, { desc = "telescope fuzzy find current buffer" })
-
-set("n", "tB", function()
-	require("telescope.builtin").buffers({})
-end, { desc = "telescope buffers" })
-
-set("n", "ts", function()
-	require("telescope.builtin").git_status({})
-end, { desc = "telescope git status" })
-
-set("n", "td", function()
-	require("telescope.builtin").diagnostics({})
-end, { desc = "telescope diagnostics" })
-
--- bufferline
-set("n", "L", ":BufferLineCycleNext<CR>")
-set("n", "H", ":BufferLineCyclePrev<CR>")
-set("n", "<leader>L", ":BufferLineMoveNext<CR>")
-set("n", "<leader>H", ":BufferLineMovePrev<CR>")
-
--- nvimtree
-set("", "<leader>e", ":NvimTreeToggle<CR>")
-
--- zen-mode
-set("n", "<leader>z", function()
-	require("zen-mode").toggle()
-end, { desc = "open zen-mode" })
-
--- dap
-set("n", "<leader>b", function()
-	require("dap").toggle_breakpoint()
-end, { desc = "dap toggle breakpoint" })
-
-set("n", "<F5>", function()
-	require("dap").continue()
-end, { desc = "dap continue" })
-
-set("n", "<F10>", function()
-	require("dap").step_over()
-end, { desc = "dap step over" })
-
-set("n", "<F11>", function()
-	require("dap").step_into()
-end, { desc = "dap step into" })
-
-set("n", "<F12>", function()
-	require("dap").step_out()
-end, { desc = "dap step out" })
-
-set("n", "<leader>t", function()
-	require("dap").terminate()
-end, { desc = "dap terminate" })
-
 -- illuminate
 set("n", "'", function()
 	require("illuminate").next_reference({ wrap = true })
@@ -139,13 +66,12 @@ set("n", '"', function()
 	require("illuminate").next_reference({ reverse = true, wrap = true })
 end, { desc = "illuminate prev reference" })
 
--- symbols outline
-set("n", "<leader>s", ":SymbolsOutline<CR>")
-
 -- bufdelete
 local bf_ok, bf = pcall(require, "bufdelete")
 if bf_ok then
 	set("n", "<leader>d", function()
 		bf.bufdelete(0, true)
 	end, { desc = "Bufdelete without changing layout" })
+else
+	set("n", "<leader>d", ":bdelete<CR>")
 end

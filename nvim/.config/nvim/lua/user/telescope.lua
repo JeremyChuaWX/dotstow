@@ -49,3 +49,36 @@ telescope.setup({
 })
 
 telescope.load_extension("fzf")
+
+-- keymaps
+local set = vim.keymap.set
+
+set("n", "tt", ":Telescope<CR>")
+
+set("n", "tf", function()
+	require("telescope.builtin").find_files({})
+end, { desc = "telescope find files" })
+
+set("n", "tg", function()
+	require("telescope.builtin").live_grep({})
+end, { desc = "telescope live grep" })
+
+set("n", "th", function()
+	require("telescope.builtin").help_tags({})
+end, { desc = "telescope help tags" })
+
+set("n", "tb", function()
+	require("telescope.builtin").current_buffer_fuzzy_find({})
+end, { desc = "telescope fuzzy find current buffer" })
+
+set("n", "tB", function()
+	require("telescope.builtin").buffers({})
+end, { desc = "telescope buffers" })
+
+set("n", "ts", function()
+	require("telescope.builtin").git_status({})
+end, { desc = "telescope git status" })
+
+set("n", "td", function()
+	require("telescope.builtin").diagnostics({})
+end, { desc = "telescope diagnostics" })
