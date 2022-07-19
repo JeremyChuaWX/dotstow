@@ -142,9 +142,6 @@ end, { desc = "illuminate prev reference" })
 -- symbols outline
 set("n", "<leader>s", ":SymbolsOutline<CR>")
 
--- icon picker
-set("n", "<Leader>i", "<cmd>PickIcons<cr>")
-
 -- bufdelete
 local bf_ok, bf = pcall(require, "bufdelete")
 if bf_ok then

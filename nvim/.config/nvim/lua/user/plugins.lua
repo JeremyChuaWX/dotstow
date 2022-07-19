@@ -52,6 +52,17 @@ return packer.startup(function(use)
 	use("kylechui/nvim-surround")
 	use("norcalli/nvim-colorizer.lua")
 
+	-- interface
+	use({ "akinsho/bufferline.nvim", branch = "main" })
+	use({ "akinsho/toggleterm.nvim", branch = "main" })
+	use("nvim-lualine/lualine.nvim")
+	use("stevearc/dressing.nvim")
+	use("kyazdani42/nvim-tree.lua")
+	use("folke/zen-mode.nvim")
+
+	-- hydra
+	use("anuvyklack/hydra.nvim")
+
 	-- hop
 	use({ "phaazon/hop.nvim", branch = "v2" })
 
@@ -61,14 +72,6 @@ return packer.startup(function(use)
 	-- comment
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-
-	-- interface
-	use({ "akinsho/bufferline.nvim", branch = "main" })
-	use({ "akinsho/toggleterm.nvim", branch = "main" })
-	use("nvim-lualine/lualine.nvim")
-	use("stevearc/dressing.nvim")
-	use("kyazdani42/nvim-tree.lua")
-	use("folke/zen-mode.nvim")
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
@@ -123,14 +126,6 @@ return packer.startup(function(use)
 	-- colorschemes
 	use("rebelot/kanagawa.nvim")
 	use("Yazeed1s/minimal.nvim")
-
-	-- icon picker
-	use({
-		"ziontee113/icon-picker.nvim",
-		config = function()
-			require("icon-picker")
-		end,
-	})
 
 	if PACKER_BOOTSTRAP then
 		packer.sync()
