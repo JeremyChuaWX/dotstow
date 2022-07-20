@@ -3,17 +3,18 @@ if not hydra_status then
 	return
 end
 
-local bufferline_status, bufferline = pcall(require, "bufferline")
-if not bufferline_status then
+local splits_status, splits = pcall(require, "smart-splits")
+if not splits_status then
 	return
 end
 
 local hint = [[
-Move
-----
-^^^_k_^^^
-_h_ ^ _l_
-^^^_j_^^^
+ ^^^Focus^^^   ^^  Sizing   ^^ 
+ ^^^-----^^^   ^^-----------^^ 
+ ^ ^ _k_ ^ ^   ^   _<C-k>_   ^ 
+ _h_ ^ ^ _l_   _<C-h>_ _<C-l>_ 
+ ^ ^ _j_ ^ ^   ^   _<C-j>_   ^ 
+ ^ ^ ^ ^ ^ ^   ^_=_: equalise^ 
 ]]
 
 hydra({
@@ -39,6 +40,13 @@ hydra({
 		{ "j", "<C-w>j", { desc = "move down" } },
 		{ "k", "<C-w>k", { desc = "move up" } },
 		{ "l", "<C-w>l", { desc = "move right" } },
+
+		{ "<C-h>", function() splits.resize_left(2) end, },
+		{ "<C-j>", function() splits.resize_down(2) end, },
+		{ "<C-k>", function() splits.resize_up(2) end, },
+		{ "<C-l>", function() splits.resize_right(2) end, },
+		{ "=", "<C-w>=", { desc = "equalise" } },
+
 		{ "q", nil, { exit = true, nowait = true, desc = "exit" } },
 	},
 })

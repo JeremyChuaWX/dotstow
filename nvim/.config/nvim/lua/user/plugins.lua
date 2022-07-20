@@ -51,6 +51,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("kylechui/nvim-surround")
 	use("norcalli/nvim-colorizer.lua")
+	use("Vonr/align.nvim")
 
 	-- interface
 	use({ "akinsho/bufferline.nvim", branch = "main" })
@@ -59,6 +60,7 @@ return packer.startup(function(use)
 	use("stevearc/dressing.nvim")
 	use("kyazdani42/nvim-tree.lua")
 	use("folke/zen-mode.nvim")
+	use("mrjones2014/smart-splits.nvim")
 
 	-- hydra
 	use("anuvyklack/hydra.nvim")
