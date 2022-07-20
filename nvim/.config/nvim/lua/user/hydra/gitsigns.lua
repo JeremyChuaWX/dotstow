@@ -12,7 +12,6 @@ local hint = [[
 _J_: next hunk    _s_: stage hunk      _B_: blame show full 
 _K_: prev hunk    _S_: stage buffer    _b_: blame line 
 _p_: preview hunk _u_: undo last stage _d_: show deleted 
-_q_: exit
 ]]
 
 hydra({
@@ -22,7 +21,7 @@ hydra({
 		buffer = bufnr,
 		hint = {
 			border = "rounded",
-			position = "middle",
+			position = "middle-right",
 		},
 		color = "pink",
 		invoke_on_body = true,
