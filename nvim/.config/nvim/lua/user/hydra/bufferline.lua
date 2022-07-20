@@ -34,7 +34,7 @@ hydra({
 		end,
 	},
 	mode = { "n", "x" },
-	body = "<C-w>",
+	body = "<space>hw",
 	heads = {
 		{ "h", "<C-w>h", { desc = "move left" } },
 		{ "j", "<C-w>j", { desc = "move down" } },

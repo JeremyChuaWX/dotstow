@@ -31,7 +31,7 @@ hydra({
 		end,
 	},
 	mode = { "n", "x" },
-	body = "<leader>g",
+	body = "<space>hg",
 	heads = {
 		{
 			"J",
