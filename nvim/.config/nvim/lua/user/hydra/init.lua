@@ -1,2 +1,2 @@
 require("user.hydra.gitsigns")
-require("user.hydra.bufferline")
+require("user.hydra.windows")

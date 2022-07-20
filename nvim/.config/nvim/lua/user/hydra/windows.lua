@@ -18,7 +18,7 @@ local hint = [[
 ]]
 
 hydra({
-	name = "Bufferline",
+	name = "Windows",
 	hint = hint,
 	config = {
 		buffer = bufnr,
