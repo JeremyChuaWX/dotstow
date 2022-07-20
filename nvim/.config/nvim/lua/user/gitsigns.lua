@@ -74,17 +74,6 @@ gitsigns.setup({
 		end, { desc = "gitsigns prev hunk", expr = true })
 
 		-- Actions
-		map({ "n", "v" }, "<leader>hs", gs.stage_hunk, { desc = "gitsigns stage hunk" })
-		map("n", "<leader>hS", gs.stage_buffer, { desc = "gitsigns stage buffer" })
-		map("n", "<leader>hu", gs.undo_stage_hunk, { desc = "gitsigns undo stage hunk" })
-		map({ "n", "v" }, "<leader>hr", gs.reset_hunk, { desc = "gitsigns reset hunk" })
-		map("n", "<leader>hR", gs.reset_buffer, { desc = "gitsigns reset buffer" })
-		map("n", "<leader>hp", gs.preview_hunk, { desc = "gitsigns preview hunk" })
-		map("n", "<leader>hb", function()
-			gs.blame_line({ full = true, ignore_whitespace = false })
-		end, { desc = "gitsigns blameline" })
-
-		-- Text object
-		map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", { desc = "gitsigns text object for hunks" })
+		map("n", "<leader>gp", gs.preview_hunk, { desc = "gitsigns preview hunk" })
 	end,
 })
