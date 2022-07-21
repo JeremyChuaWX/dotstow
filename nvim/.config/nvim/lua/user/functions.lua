@@ -1,13 +1,13 @@
 local M = {}
 
 M.in_list = function(name, list)
-	for _, check in pairs(list) do
-		if name == check then
-			return true
-		end
-	end
+    for _, check in pairs(list) do
+        if name == check then
+            return true
+        end
+    end
 
-	return false
+    return false
 end
 
 return M

@@ -1,9 +1,9 @@
 local status_ok, blankline = pcall(require, "indent_blankline")
 if not status_ok then
-  return
+    return
 end
 
-blankline.setup {
+blankline.setup({
     show_current_context = true,
     show_current_context_start = true,
     show_first_indent_level = false,
@@ -27,4 +27,4 @@ blankline.setup {
         "terminal",
         "nofile",
     },
-}
+})

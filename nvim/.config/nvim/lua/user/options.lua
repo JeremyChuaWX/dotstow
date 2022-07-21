@@ -56,6 +56,8 @@ opt.linebreak = true
 opt.whichwrap = "b,s,<,>,[,]"
 opt.joinspaces = false
 opt.backspace = { "indent", "eol", "start" }
+opt.list = true
+opt.listchars = { trail = "", eol = "" }
 
 -------------
 -- folding --

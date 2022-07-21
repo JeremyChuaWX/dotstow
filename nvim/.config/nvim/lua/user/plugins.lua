@@ -2,30 +2,30 @@ local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
 if fn.empty(fn.glob(install_path)) > 0 then
-	PACKER_BOOTSTRAP = fn.system({
-		"git",
-		"clone",
-		"--depth",
-		"1",
-		"https://github.com/wbthomason/packer.nvim",
-		install_path,
-	})
-	print("Installing packer close and reopen Neovim...")
-	vim.cmd([[packadd packer.nvim]])
+    PACKER_BOOTSTRAP = fn.system({
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/wbthomason/packer.nvim",
+        install_path,
+    })
+    print("Installing packer close and reopen Neovim...")
+    vim.cmd([[packadd packer.nvim]])
 end
 
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-	return
+    return
 end
 
 -- Have packer use a popup window
 packer.init({
-	display = {
-		open_fn = function()
-			return require("packer.util").float({ border = "single" })
-		end,
-	},
+    display = {
+        open_fn = function()
+            return require("packer.util").float({ border = "single" })
+        end,
+    },
 })
 
 -- automatically run :PackerCompile when saving this file
@@ -37,99 +37,99 @@ vim.cmd([[
 ]])
 
 return packer.startup(function(use)
-	-- general
-	use("wbthomason/packer.nvim")
-	use("nvim-lua/popup.nvim")
-	use("nvim-lua/plenary.nvim")
-	use("kyazdani42/nvim-web-devicons")
-	use("onsails/lspkind.nvim")
-	use("antoinemadec/FixCursorHold.nvim")
-	use("lewis6991/impatient.nvim")
+    -- general
+    use("wbthomason/packer.nvim")
+    use("nvim-lua/popup.nvim")
+    use("nvim-lua/plenary.nvim")
+    use("kyazdani42/nvim-web-devicons")
+    use("onsails/lspkind.nvim")
+    use("antoinemadec/FixCursorHold.nvim")
+    use("lewis6991/impatient.nvim")
 
-	-- editor
-	use("lukas-reineke/indent-blankline.nvim")
-	use("windwp/nvim-autopairs")
-	use("kylechui/nvim-surround")
-	use("norcalli/nvim-colorizer.lua")
-	use("Vonr/align.nvim")
+    -- editor
+    use("lukas-reineke/indent-blankline.nvim")
+    use("windwp/nvim-autopairs")
+    use("kylechui/nvim-surround")
+    use("norcalli/nvim-colorizer.lua")
+    use("Vonr/align.nvim")
 
-	-- interface
-	use({ "akinsho/bufferline.nvim", branch = "main" })
-	use({ "akinsho/toggleterm.nvim", branch = "main" })
-	use("nvim-lualine/lualine.nvim")
-	use("stevearc/dressing.nvim")
-	use("kyazdani42/nvim-tree.lua")
-	use("folke/zen-mode.nvim")
-	use("mrjones2014/smart-splits.nvim")
+    -- interface
+    use({ "akinsho/bufferline.nvim", branch = "main" })
+    use({ "akinsho/toggleterm.nvim", branch = "main" })
+    use("nvim-lualine/lualine.nvim")
+    use("stevearc/dressing.nvim")
+    use("kyazdani42/nvim-tree.lua")
+    use("folke/zen-mode.nvim")
+    use("mrjones2014/smart-splits.nvim")
 
-	-- hydra
-	use("anuvyklack/hydra.nvim")
+    -- hydra
+    use("anuvyklack/hydra.nvim")
 
-	-- hop
-	use({ "phaazon/hop.nvim", branch = "v2" })
+    -- hop
+    use({ "phaazon/hop.nvim", branch = "v2" })
 
-	-- bufdelete
-	use("famiu/bufdelete.nvim")
+    -- bufdelete
+    use("famiu/bufdelete.nvim")
 
-	-- comment
-	use("numToStr/Comment.nvim")
-	use("JoosepAlviste/nvim-ts-context-commentstring")
+    -- comment
+    use("numToStr/Comment.nvim")
+    use("JoosepAlviste/nvim-ts-context-commentstring")
 
-	-- git
-	use("lewis6991/gitsigns.nvim")
+    -- git
+    use("lewis6991/gitsigns.nvim")
 
-	-- telescope
-	use("nvim-telescope/telescope.nvim")
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+    -- telescope
+    use("nvim-telescope/telescope.nvim")
+    use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
-	-- treesitter
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("windwp/nvim-ts-autotag")
+    -- treesitter
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    use("windwp/nvim-ts-autotag")
 
-	-- lsp
-	use("neovim/nvim-lspconfig")
-	use("williamboman/nvim-lsp-installer")
-	use("jose-elias-alvarez/null-ls.nvim")
+    -- lsp
+    use("neovim/nvim-lspconfig")
+    use("williamboman/nvim-lsp-installer")
+    use("jose-elias-alvarez/null-ls.nvim")
 
-	-- lsp plugins
-	use("ray-x/lsp_signature.nvim")
-	use("RRethy/vim-illuminate")
-	use("j-hui/fidget.nvim")
-	use("simrat39/symbols-outline.nvim")
+    -- lsp plugins
+    use("ray-x/lsp_signature.nvim")
+    use("RRethy/vim-illuminate")
+    use("j-hui/fidget.nvim")
+    use("simrat39/symbols-outline.nvim")
 
-	-- java
-	use("mfussenegger/nvim-jdtls")
+    -- java
+    use("mfussenegger/nvim-jdtls")
 
-	-- typescript
-	use("jose-elias-alvarez/typescript.nvim")
+    -- typescript
+    use("jose-elias-alvarez/typescript.nvim")
 
-	-- json
-	use("b0o/schemastore.nvim")
+    -- json
+    use("b0o/schemastore.nvim")
 
-	-- dap
-	use("mfussenegger/nvim-dap")
-	use("rcarriga/nvim-dap-ui")
+    -- dap
+    use("mfussenegger/nvim-dap")
+    use("rcarriga/nvim-dap-ui")
 
-	-- snippets
-	use("L3MON4D3/LuaSnip")
-	use("rafamadriz/friendly-snippets")
+    -- snippets
+    use("L3MON4D3/LuaSnip")
+    use("rafamadriz/friendly-snippets")
 
-	-- cmp
-	use("hrsh7th/nvim-cmp")
+    -- cmp
+    use("hrsh7th/nvim-cmp")
 
-	-- cmp sources
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
-	use("saadparwaiz1/cmp_luasnip")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-nvim-lua")
+    -- cmp sources
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
+    use("saadparwaiz1/cmp_luasnip")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-nvim-lua")
 
-	-- colorschemes
-	use("rebelot/kanagawa.nvim")
-	use("Yazeed1s/minimal.nvim")
+    -- colorschemes
+    use("rebelot/kanagawa.nvim")
+    use("Yazeed1s/minimal.nvim")
 
-	if PACKER_BOOTSTRAP then
-		packer.sync()
-	end
+    if PACKER_BOOTSTRAP then
+        packer.sync()
+    end
 end)

@@ -3,8 +3,8 @@ if not status_ok then
     return
 end
 
-toggleterm.setup {
+toggleterm.setup({
     direction = "float",
     open_mapping = [[<c-\>]],
     hide_numbers = true,
-}
+})
