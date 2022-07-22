@@ -74,6 +74,6 @@ gitsigns.setup({
         end, { desc = "gitsigns prev hunk", expr = true })
 
         -- Actions
-        map("n", "<leader>gp", gs.preview_hunk, { desc = "gitsigns preview hunk" })
+        map("n", "<leader>g", gs.preview_hunk, { desc = "gitsigns preview hunk" })
     end,
 })
