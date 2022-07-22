@@ -32,12 +32,34 @@ telescope.setup({
         },
         sorting_strategy = "ascending",
     },
+
     file_ignore_patterns = {
         "node_modules",
         ".git/",
     },
+
     file_sorter = require("telescope.sorters").get_fuzzy_file,
     generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
+
+    pickers = {
+        git_status = {
+            initial_mode = "normal",
+            mappings = {
+                i = {
+                    ["<C-e>"] = "close",
+                    ["<Tab>"] = "move_selection_next",
+                    ["<S-Tab>"] = "move_selection_previous",
+                },
+                n = {
+                    ["s"] = "git_staging_toggle",
+                    ["<C-e>"] = "close",
+                    ["<Tab>"] = "move_selection_next",
+                    ["<S-Tab>"] = "move_selection_previous",
+                },
+            },
+        },
+    },
+
     extensions = {
         fzf = {
             fuzzy = true, -- false will only do exact matching
