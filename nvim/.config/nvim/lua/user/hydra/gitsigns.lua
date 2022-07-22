@@ -26,10 +26,6 @@ hydra({
         },
         color = "pink",
         invoke_on_body = true,
-        on_enter = function()
-            vim.cmd("silent! %foldopen!")
-            vim.bo.modifiable = false
-        end,
     },
     mode = { "n", "x" },
     body = "<space>hg",
