@@ -83,3 +83,7 @@ if bf_ok then
 else
     set("n", "<leader>d", ":bdelete<CR>")
 end
+
+-- session manager
+set("n", "<C-s>s", "<cmd>Autosession search<CR>")
+set("n", "<C-S>d", "<cmd>Autosession delete<CR>")
