@@ -62,6 +62,9 @@ return packer.startup(function(use)
     use("folke/zen-mode.nvim")
     use("mrjones2014/smart-splits.nvim")
 
+    -- session manager
+    use("rmagatti/auto-session")
+
     -- hydra
     use("anuvyklack/hydra.nvim")
 
