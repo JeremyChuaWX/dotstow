@@ -5,6 +5,7 @@ end
 
 telescope.setup({
     defaults = {
+        initial_mode = "insert",
         layout_config = {
             prompt_position = "top",
             horizontal = {
@@ -20,12 +21,12 @@ telescope.setup({
         path_display = { "absolute" },
         mappings = {
             i = {
-                ["<C-e>"] = "close",
+                ["<esc>"] = "close",
                 ["<Tab>"] = "move_selection_next",
                 ["<S-Tab>"] = "move_selection_previous",
             },
             n = {
-                ["<C-e>"] = "close",
+                ["<esc>"] = "close",
                 ["<Tab>"] = "move_selection_next",
                 ["<S-Tab>"] = "move_selection_previous",
             },
