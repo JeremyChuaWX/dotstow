@@ -9,9 +9,10 @@ if not gitsigns_status then
 end
 
 local hint = [[
-_J_: next hunk    _s_: stage hunk      _B_: blame show full 
-_K_: prev hunk    _S_: stage buffer    _b_: blame line 
-_p_: preview hunk _u_: undo last stage _d_: show deleted 
+ _J_: next hunk    _s_: stage hunk      _B_: blame show full
+ _K_: prev hunk    _R_: reset buffer    _b_: blame line
+ _p_: preview hunk _S_: stage buffer    _d_: show deleted
+ _r_: reset hunk   _u_: undo last stage
 ]]
 
 hydra({
@@ -72,6 +73,8 @@ hydra({
             end,
             { desc = "blame show full" },
         },
+        { "r", gitsigns.reset_hunk, { desc = "reset hunk" } },
+        { "R", gitsigns.reset_buffer, { desc = "reset buffer" } },
         { "q", nil, { exit = true, nowait = true, desc = "exit" } },
     },
 })
