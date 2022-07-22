@@ -26,6 +26,9 @@ hydra({
         },
         color = "pink",
         invoke_on_body = true,
+        on_exit = function()
+            gitsigns.toggle_deleted(false)
+        end,
     },
     mode = { "n", "x" },
     body = "<space>hg",
