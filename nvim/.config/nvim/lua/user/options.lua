@@ -11,7 +11,7 @@ opt.lazyredraw = true
 opt.updatetime = 50
 opt.timeoutlen = 300
 opt.mouse = "a"
-opt.autochdir = true
+-- opt.autochdir = true
 
 ---------------------------
 -- backup, swap, viminfo --
