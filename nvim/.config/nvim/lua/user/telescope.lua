@@ -22,6 +22,7 @@ telescope.setup({
         mappings = {
             i = {
                 ["<esc>"] = "close",
+                ["<C-e>"] = "close",
                 ["<Tab>"] = "move_selection_next",
                 ["<S-Tab>"] = "move_selection_previous",
             },
