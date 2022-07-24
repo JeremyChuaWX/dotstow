@@ -59,7 +59,6 @@ return packer.startup(function(use)
     use("nvim-lualine/lualine.nvim")
     use("stevearc/dressing.nvim")
     use("kyazdani42/nvim-tree.lua")
-    use("folke/zen-mode.nvim")
     use("mrjones2014/smart-splits.nvim")
 
     -- session manager
